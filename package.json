@@ -1,0 +1,50 @@
+{
+	"name": "repoco",
+	"version": "0.1.0",
+	"description": "The most precise regex-based postal code validator",
+	"main": "index.js",
+	"scripts": {
+		"test": "ava",
+		"build": "parcel build index.js",
+		"prepublish": "yarn build"
+	},
+	"repository": "https://github.com/nnmrts/repoco",
+	"license": "MIT",
+	"private": false,
+	"author": {
+		"name": "nnmrts",
+		"email": "nanomiratus@gmail.com"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.7.4",
+		"@babel/plugin-proposal-class-properties": "^7.7.4",
+		"@babel/plugin-transform-flow-strip-types": "^7.7.4",
+		"@babel/plugin-transform-runtime": "^7.7.4",
+		"@babel/preset-env": "^7.7.4",
+		"@babel/preset-flow": "^7.7.4",
+		"@babel/register": "^7.7.4",
+		"@pumpn/eslint-config": "^0.5.0",
+		"ava": "^2.4.0",
+		"eslint": "^6.7.2",
+		"flow-bin": "^0.112.0",
+		"parcel-bundler": "^1.12.4"
+	},
+	"ava": {
+		"require": [
+			"@babel/register"
+		],
+		"babel": {
+			"testOptions": {
+				"plugins": [
+					"@babel/plugin-transform-flow-strip-types"
+				]
+			}
+		},
+		"verbose": true,
+		"failFast": false
+	},
+	"dependencies": {
+		"fill-range": "^7.0.1",
+		"to-regex-range": "^5.0.1"
+	}
+}

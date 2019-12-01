@@ -1,0 +1,14 @@
+{
+	"extends": [
+		"@pumpn"
+	],
+	"rules": {
+		"quote-props": [
+			"error",
+			"as-needed",
+			{
+				"numbers": true
+			}
+		]
+	}
+}
