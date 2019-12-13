@@ -73,11 +73,7 @@
 //	70	-					78
 //						86
 //		91						99
-import toRegexRange from "to-regex-range";
-
-const range = toRegexRange("00", 99, {
-	capture: true
-});
+import full2NumberDigits from "../../../helpers/full/number/full-2-number-digits.js";
 
 const impossibleNextTwoDigits = [
 	[
@@ -159,7 +155,7 @@ const impossibleNextTwoDigits = [
 const ranges = impossibleNextTwoDigits.map((digits: (number | string)[], index: number): string => {
 	const firstDigit = index + 2;
 
-	return `(${firstDigit}(?!(${digits.join("|")}))${range})`;
+	return `(${firstDigit}(?!(${digits.join("|")}))${full2NumberDigits})`;
 }).join("|");
 
-export default new RegExp(`^(1[0-9]{2}|${ranges}) [0-9]{2}$`);
+export default new RegExp(`^(1${full2NumberDigits}|${ranges}) ${full2NumberDigits}$`);

@@ -1,5 +1,6 @@
 // @flow
 // Poland
 // n{2}-n{3}
+import full2NumberDigits from "../../../helpers/full/number/full-2-number-digits.js";
 
-export default /^[0-9]{2}-[0-9]{3}$/;
+export default new RegExp(`^${full2NumberDigits}-[0-9]{3}$`);

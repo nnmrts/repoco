@@ -3,5 +3,6 @@
 // [MC]980n{2}
 // or
 // [MC ]980n{2}
+import full2NumberDigits from "../../../helpers/full/number/full-2-number-digits.js";
 
-export default /^(MC ?)?980[0-9]{2}$/;
+export default new RegExp(`^(MC ?)?980${full2NumberDigits}$`);

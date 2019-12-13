@@ -7,5 +7,6 @@
 // or
 // D6W x{4}
 // impossible fourth to seventh digits are B,G,I,J,L,M,O,Q,S,U,Z
+import full2NumberDigits from "../../../helpers/full/number/full-2-number-digits.js";
 
-export default /^((?![BGIJLMOQSUZ])[A-Z][0-9]{2}|D6W) ((?![BGIJLMOQSUZ])[A-Z0-9]){4}$/;
+export default new RegExp(`^((?![BGIJLMOQSUZ])[A-Z]${full2NumberDigits}|D6W) ((?![BGIJLMOQSUZ])[A-Z0-9]){4}$`);

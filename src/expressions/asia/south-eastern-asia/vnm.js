@@ -12,5 +12,6 @@
 //				77	78
 //		81
 //					98	99
+import full2NumberDigits from "../../../helpers/full/number/full-2-number-digits.js";
 
-export default /^(?!(0[0-9]|1[79]|21|3[47]|49|5[04]|6[189]|7[78]|81|9[89]))[0-9]{2}[0-9]{4}$/;
+export default new RegExp(`^(?!(0[0-9]|1[79]|21|3[47]|49|5[04]|6[189]|7[78]|81|9[89]))${full2NumberDigits}[0-9]{4}$`);

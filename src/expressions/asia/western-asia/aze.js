@@ -17,6 +17,8 @@
 // possible last two digits are 00,02,17,44,63,72
 import toRegexRange from "to-regex-range";
 
+import full2NumberDigits from "../../../helpers/full/number/full-2-number-digits.js";
+
 const range = toRegexRange("01", 99, {
 	capture: true,
 	relaxZeros: false
@@ -53,6 +55,6 @@ const impossibleFirstTwoDigits = `(${[
 	64
 ].join("|")})`;
 
-const firstRegex = `((?!${antiRanges}|${impossibleFirstTwoDigits})${range}[0-9]{2})`;
+const firstRegex = `((?!${antiRanges}|${impossibleFirstTwoDigits})${range}${full2NumberDigits})`;
 
 export default new RegExp(`^AZ (${firstRegex}|10(0[02]|17|44|63|72))$`);

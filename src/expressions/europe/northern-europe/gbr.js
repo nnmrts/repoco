@@ -36,13 +36,14 @@
 // BFPO n{3}
 // or
 // BFPO n{4}
+import full2NumberDigits from "../../../helpers/full/number/full-2-number-digits.js";
 
 const formats = [
 	"(?![QVX])[A-Z](?![IJZ])[A-Z][0-9][ABEHMNPRV-Y]",
 	"(?![QVX])[A-Z][0-9][A-HJKPS-UW]",
 	"[BEGLMNSW][0-9]{1,2}",
 	"(?![QVX])[A-Z]{2}[0-9]",
-	"(?![QVX])[A-Z]{2}[0-9]{2}"
+	`(?![QVX])[A-Z]{2}${full2NumberDigits}`
 ].join("|");
 
 const suffix = "[0-9]((?![CIKMOV])[A-Z]){2}";
