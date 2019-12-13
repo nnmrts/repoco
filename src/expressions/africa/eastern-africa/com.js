@@ -1,0 +1,4 @@
+// @flow
+// Comoros
+
+export default /^$/;

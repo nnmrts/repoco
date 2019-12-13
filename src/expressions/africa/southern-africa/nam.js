@@ -1,0 +1,4 @@
+// @flow
+// Namibia
+
+export default /^$/;

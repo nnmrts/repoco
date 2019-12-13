@@ -1,0 +1,4 @@
+// @flow
+// Vanuatu
+
+export default /^$/;

@@ -10,5 +10,10 @@
 				"numbers": true
 			}
 		]
+	},
+	"settings": {
+		"polyfills": [
+			"Object"
+		]
 	}
 }

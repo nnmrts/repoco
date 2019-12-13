@@ -1,0 +1,4 @@
+// @flow
+// Fiji
+
+export default /^$/;

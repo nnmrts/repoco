@@ -1,0 +1,4 @@
+// @flow
+// Mali
+
+export default /^$/;

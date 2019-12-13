@@ -1,0 +1,4 @@
+// @flow
+// Botswana
+
+export default /^$/;

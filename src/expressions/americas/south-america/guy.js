@@ -1,0 +1,4 @@
+// @flow
+// Guyana
+
+export default /^$/;

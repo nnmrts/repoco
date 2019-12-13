@@ -1,0 +1,4 @@
+// @flow
+// Benin
+
+export default /^$/;

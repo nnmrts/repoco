@@ -1,0 +1,4 @@
+// @flow
+// Curaçao
+
+export default /^$/;

@@ -1,0 +1,4 @@
+// @flow
+// Suriname
+
+export default /^$/;

@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "ava",
-		"build": "parcel build index.js",
+		"build": "parcel build src/index.js",
 		"prepublish": "yarn build"
 	},
 	"repository": "https://github.com/nnmrts/repoco",

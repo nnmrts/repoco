@@ -1,0 +1,4 @@
+// @flow
+// Nauru
+
+export default /^$/;

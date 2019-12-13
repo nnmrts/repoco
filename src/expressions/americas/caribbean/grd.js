@@ -1,0 +1,4 @@
+// @flow
+// Grenada
+
+export default /^$/;

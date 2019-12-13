@@ -1,0 +1,19 @@
+// @flow
+export { default as are } from "./western-asia/are.js";
+export { default as arm } from "./western-asia/arm.js";
+export { default as aze } from "./western-asia/aze.js";
+export { default as bhr } from "./western-asia/bhr.js";
+export { default as cyp } from "./western-asia/cyp.js";
+export { default as geo } from "./western-asia/geo.js";
+export { default as irq } from "./western-asia/irq.js";
+export { default as isr } from "./western-asia/isr.js";
+export { default as jor } from "./western-asia/jor.js";
+export { default as kwt } from "./western-asia/kwt.js";
+export { default as lbn } from "./western-asia/lbn.js";
+export { default as omn } from "./western-asia/omn.js";
+export { default as pse } from "./western-asia/pse.js";
+export { default as qat } from "./western-asia/qat.js";
+export { default as sau } from "./western-asia/sau.js";
+export { default as syr } from "./western-asia/syr.js";
+export { default as tur } from "./western-asia/tur.js";
+export { default as yem } from "./western-asia/yem.js";

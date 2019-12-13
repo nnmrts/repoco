@@ -1,0 +1,4 @@
+// @flow
+// Tuvalu
+
+export default /^$/;

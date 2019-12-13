@@ -1,0 +1,4 @@
+// @flow
+// Tonga
+
+export default /^$/;
