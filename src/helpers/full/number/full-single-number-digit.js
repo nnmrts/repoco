@@ -1,4 +1,4 @@
 // @flow
-import oneDigit from "../../functions/single-number-digit.js";
+import singleNumberDigit from "../../functions/single-number-digit.js";
 
-export default oneDigit(0, 9);
+export default singleNumberDigit(0, 9);
