@@ -1,0 +1,40 @@
+repoco {
+	variants = listOf<(variant), (or)>
+
+		variant = pattern space* (constraint space*)*
+
+			pattern = (character|number|alphanumeric|optional|customAny|safeSpace)+
+
+				character = "c" repeater ?
+				number = "n" repeater ?
+				alphanumeric = "x" repeater ?
+
+					repeater = "{" digit+ "}"
+
+				optional = "[" pattern "]"
+				customAny = ~("[" | "]" | "{" | "}" | lower | space) any
+				safeSpace = ~(or) space ~(constraint|or)
+
+			constraint = (excluder|tolerator)
+
+				excluder = excludeWord (ordinalNumeral|relativeDescriber) (cardinalNumeral)? digitWord beWord digitList+
+
+					excludeWord = "impossible" space
+
+				tolerator = tolerateWord (ordinalNumeral|relativeDescriber) (cardinalNumeral)? digitWord beWord digitList+
+
+					tolerateWord = "possible" space
+
+					ordinalNumeral = ("first"|"second"|"third"|"fourth"|"sixth"|"seventh") space
+					relativeDescriber = ("next"|"last") space
+					cardinalNumeral = ("one"|"two"|"three"|"four"|"six"|"seven") space
+					digitWord = "digit" "s"? space
+					beWord = ("is"|"are") space*
+					digitList = nonemptyListOf<((range|upper|digit)+), (separators)> space*
+						range = nonemptyListOf<((upper|digit)+), hyphen>
+						separators = (","|space+)
+							hyphen = space* "-" space*
+
+
+		or = "or" space
+}
