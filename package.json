@@ -2,7 +2,7 @@
 	"name": "repoco",
 	"version": "0.1.0",
 	"description": "The most precise regex-based postal code validator",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"scripts": {
 		"test": "ava",
 		"build": "parcel build src/index.js",
