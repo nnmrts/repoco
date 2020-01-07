@@ -9,11 +9,16 @@
 			{
 				"numbers": true
 			}
-		]
+		],
+		"no-spaced-func": "off"
 	},
 	"settings": {
 		"polyfills": [
-			"Object"
+			"Array",
+			"Number",
+			"Object",
+			"Promise",
+			"Set"
 		]
 	}
 }
