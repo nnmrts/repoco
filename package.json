@@ -45,7 +45,7 @@
 		"failFast": false
 	},
 	"dependencies": {
-		"fill-range": "^7.0.1",
+		"ohm-js": "^0.14.0",
 		"to-regex-range": "^5.0.1"
 	}
 }
