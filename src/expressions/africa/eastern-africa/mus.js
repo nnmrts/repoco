@@ -6,4 +6,4 @@
 // cn{4}
 // possible first digits are A,R
 
-export default /^([0-9]{5}|[AR][0-9]{4})$/;
+export default /^([1-9][0-9]{4}|[AR][0-9]{4})$/;
