@@ -1,2 +1,2 @@
 // @flow
-export { default as ata } from "./antarctica/ata.js";
+export { ata } from "./antarctica/antarctica.js";
