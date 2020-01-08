@@ -3,4 +3,4 @@ export { atf, bdi, com, dji, eri, eth, iot, ken, mdg, moz, mus, mwi, myt, reu, r
 export { ago, caf, cmr, cod, cog, gab, gnq, stp, tcd } from "./africa/middle-africa.js";
 export { dza, egy, esh, lby, mar, sdn, tun } from "./africa/northern-africa.js";
 export { bwa, lso, nam, swz, zaf } from "./africa/southern-africa.js";
-export { ben, bfa } from "./africa/western-africa.js";
+export { ben, bfa, civ, cpv, gha, gin, gmb, gnb, lbr, mli, mrt, ner, nga, sen, shn, sle, tgo } from "./africa/western-africa.js";

@@ -2,6 +2,7 @@
 export { default as abw } from "./caribbean/abw.js";
 export { default as aia } from "./caribbean/aia.js";
 export { default as atg } from "./caribbean/atg.js";
+export { default as bes } from "./caribbean/bes.js";
 export { default as bhs } from "./caribbean/bhs.js";
 export { default as blm } from "./caribbean/blm.js";
 export { default as brb } from "./caribbean/brb.js";
