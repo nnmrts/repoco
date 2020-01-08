@@ -1,0 +1,309 @@
+{
+	"africa": {
+		"eastern-africa": [
+			"atf",
+			"bdi",
+			"com",
+			"dji",
+			"eri",
+			"eth",
+			"iot",
+			"ken",
+			"mdg",
+			"moz",
+			"mus",
+			"mwi",
+			"myt",
+			"reu",
+			"rwa",
+			"som",
+			"ssd",
+			"syc",
+			"tza",
+			"uga",
+			"zmb",
+			"zwe"
+		],
+		"middle-africa": [
+			"ago",
+			"caf",
+			"cmr",
+			"cod",
+			"cog",
+			"gab",
+			"gnq",
+			"stp",
+			"tcd"
+		],
+		"northern-africa": [
+			"dza",
+			"egy",
+			"esh",
+			"lby",
+			"mar",
+			"sdn",
+			"tun"
+		],
+		"southern-africa": [
+			"bwa",
+			"lso",
+			"nam",
+			"swz",
+			"zaf"
+		],
+		"western-africa": [
+			"ben",
+			"bfa",
+			"civ",
+			"cpv",
+			"gha",
+			"gin",
+			"gmb",
+			"gnb",
+			"lbr",
+			"mli",
+			"mrt",
+			"ner",
+			"nga",
+			"sen",
+			"shn",
+			"sle",
+			"tgo"
+		]
+	},
+	"americas": {
+		"caribbean": [
+			"abw",
+			"aia",
+			"atg",
+			"bes",
+			"bhs",
+			"blm",
+			"brb",
+			"cub",
+			"cuw",
+			"cym",
+			"dma",
+			"dom",
+			"glp",
+			"grd",
+			"hti",
+			"jam",
+			"kna",
+			"lca",
+			"maf",
+			"msr",
+			"mtq",
+			"pri",
+			"sxm",
+			"tca",
+			"tto",
+			"vct",
+			"vgb",
+			"vir"
+		],
+		"central-america": [
+			"blz",
+			"cri",
+			"gtm",
+			"hnd",
+			"mex",
+			"nic",
+			"pan",
+			"slv"
+		],
+		"northern-america": [
+			"bmu",
+			"can",
+			"grl",
+			"spm",
+			"usa"
+		],
+		"south-america": [
+			"arg",
+			"bol",
+			"bra",
+			"bvt",
+			"chl",
+			"col",
+			"ecu",
+			"flk",
+			"guf",
+			"guy",
+			"per",
+			"pry",
+			"sgs",
+			"sur",
+			"ury",
+			"ven"
+		]
+	},
+	"antarctica": {
+		"antarctica": [
+			"ata"
+		]
+	},
+	"asia": {
+		"central-asia": [
+			"kaz",
+			"kgz",
+			"tjk",
+			"tkm",
+			"uzb"
+		],
+		"eastern-asia": [
+			"chn",
+			"hkg",
+			"jpn",
+			"kor",
+			"mac",
+			"mng",
+			"prk",
+			"twn"
+		],
+		"south-eastern-asia": [
+			"brn",
+			"idn",
+			"khm",
+			"lao",
+			"mmr",
+			"mys",
+			"phl",
+			"sgp",
+			"tha",
+			"tls",
+			"vnm"
+		],
+		"southern-asia": [
+			"afg",
+			"bgd",
+			"btn",
+			"ind",
+			"irn",
+			"lka",
+			"mdv",
+			"npl",
+			"pak"
+		],
+		"western-asia": [
+			"are",
+			"arm",
+			"aze",
+			"bhr",
+			"cyp",
+			"geo",
+			"irq",
+			"isr",
+			"jor",
+			"kwt",
+			"lbn",
+			"omn",
+			"pse",
+			"qat",
+			"sau",
+			"syr",
+			"tur",
+			"yem"
+		]
+	},
+	"europe": {
+		"eastern-europe": [
+			"bgr",
+			"blr",
+			"cze",
+			"hun",
+			"mda",
+			"pol",
+			"rou",
+			"rus",
+			"svk",
+			"ukr"
+		],
+		"northern-europe": [
+			"ala",
+			"dnk",
+			"est",
+			"fin",
+			"fro",
+			"gbr",
+			"ggy",
+			"imn",
+			"irl",
+			"isl",
+			"jey",
+			"ltu",
+			"lva",
+			"nor",
+			"sjm",
+			"swe"
+		],
+		"southern-europe": [
+			"alb",
+			"and",
+			"bih",
+			"esp",
+			"gib",
+			"grc",
+			"hrv",
+			"ita",
+			"mkd",
+			"mlt",
+			"mne",
+			"prt",
+			"smr",
+			"srb",
+			"svn",
+			"vat"
+		],
+		"western-europe": [
+			"aut",
+			"bel",
+			"che",
+			"deu",
+			"fra",
+			"lie",
+			"lux",
+			"mco",
+			"nld"
+		]
+	},
+	"oceania": {
+		"australia-and-new-zealand": [
+			"aus",
+			"cck",
+			"cxr",
+			"hmd",
+			"nfk",
+			"nzl"
+		],
+		"melanesia": [
+			"fji",
+			"ncl",
+			"png",
+			"slb",
+			"vut"
+		],
+		"micronesia": [
+			"fsm",
+			"gum",
+			"kir",
+			"mhl",
+			"mnp",
+			"nru",
+			"plw",
+			"umi"
+		],
+		"polynesia": [
+			"asm",
+			"cok",
+			"niu",
+			"pcn",
+			"pyf",
+			"tkl",
+			"ton",
+			"tuv",
+			"wlf",
+			"wsm"
+		]
+	}
+}
