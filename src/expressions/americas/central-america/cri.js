@@ -52,6 +52,7 @@
 // possible fourth digit is 0
 // possible last digits are 1-6
 // or
+// n{5}
 // possible first three digits are
 //		106	-	108
 //			207		211
