@@ -28,18 +28,15 @@ export default (variants: PostVariants): RegExp => {
 		}
 	}
 
-	const commonPrefix = newVariants.length === 1 ? "" : findCommonPrefix(newVariants);
-	const commonSuffix = reverseString(newVariants.length === 1 ? "" : findCommonPrefix(newVariants.map(reverseString)));
+	let commonPrefix = newVariants.length === 1 ? "" : findCommonPrefix(newVariants);
+	let commonSuffix = newVariants.length === 1 ? "" : reverseString(findCommonPrefix(newVariants.map(reverseString)));
 
-	console.info(
-		[
-			commonPrefix,
-			`(${newVariants.map((variant: string): string => variant.replace(commonPrefix, "").replace(commonSuffix, "")).join("|")})`,
-			commonSuffix
-		]
-			.join("")
-			.replace(/\((\(\?!([[\]|\-0-9A-Z ])+\)\([[\]|\-{}()0-9A-Z ]+\))\)/g, "$1")
-	);
+	if (commonPrefix.match(/\(|\)/)) {
+		commonPrefix = "";
+	}
+	if (commonSuffix.match(/\(|\)/)) {
+		commonSuffix = "";
+	}
 
 	return new RegExp(`^${[
 		commonPrefix,
