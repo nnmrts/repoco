@@ -8,6 +8,7 @@ import type {
 	PostDigits
 } from "../../types.js";
 import arrayDecast from "../../utils/array-decast.js";
+import arrayCast from "../../utils/array-cast.js";
 
 import { type ChainedEqualDigits } from "./chain-equal-digits.js";
 
@@ -42,7 +43,7 @@ export default (
 
 		const unitedDigits: PostVariant = united
 			.map((digit: PostDigits): PostDigits => {
-				const set = new Set(digit);
+				const set = new Set(arrayCast(digit));
 
 				const array = [
 					...set
