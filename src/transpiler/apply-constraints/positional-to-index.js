@@ -17,7 +17,7 @@ import cardinalToNumber from "./cardinal-to-number.js";
  */
 export default (position: string, length: number, index: number, amount: ?string = "one"): number => {
 	if (position === "last") {
-		return length - cardinalToNumber(amount);
+		return length - cardinalToNumber(amount) - 1;
 	}
 	if (position === "next") {
 		return index;
