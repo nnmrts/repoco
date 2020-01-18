@@ -1,4 +1,5 @@
 // @flow
+// TODO: doesn't work at all with multi digits, characters or alphanumerics...
 export default (digits: string[]): string[] => digits.map((digit: string): string | string[] => {
 	if ((/-/g).test(digit)) {
 		const [
