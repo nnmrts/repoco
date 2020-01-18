@@ -14,7 +14,7 @@ repoco {
                     	repeaterRange = digit+ "," digit+
  
 				optional = "[" pattern "]"
-				customAny = ~("[" | "]" | "{" | "}" | lower | space) any
+				customAny = ~("[" | "]" | "{" | "}" | space) any
 				safeSpace = ~(or) space ~(constraint|or)
 
 			constraint = (excluder|tolerator)
