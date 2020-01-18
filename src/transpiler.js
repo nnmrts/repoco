@@ -13,8 +13,8 @@ import assemble from "./transpiler/assemble.js";
  * @returns {Promise<string>}
  * transpiled
  */
-export default async(path: string): Promise<RegExp> => {
-	const definition = await getText(path);
+export default (path: string): RegExp => {
+	const definition = getText(path);
 
 	console.info(`\nPATH: ${path}`);
 	console.info("DEFINITION:");
