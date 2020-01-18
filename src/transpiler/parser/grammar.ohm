@@ -9,8 +9,10 @@ repoco {
 				number = "n" repeater ?
 				alphanumeric = "x" repeater ?
 
-					repeater = "{" digit+ "}"
+					repeater = "{" (repeaterRange | digit+) "}"
 
+                    	repeaterRange = digit+ "," digit+
+ 
 				optional = "[" pattern "]"
 				customAny = ~("[" | "]" | "{" | "}" | lower | space) any
 				safeSpace = ~(or) space ~(constraint|or)
