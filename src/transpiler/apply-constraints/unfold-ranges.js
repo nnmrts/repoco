@@ -11,5 +11,4 @@ export default (digits: string[]): string[] => digits.map((digit: string): strin
 	}
 
 	return digit;
-	// $FlowIssue flat flat flat flat
 }).flat();

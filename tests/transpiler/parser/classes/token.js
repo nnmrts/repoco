@@ -6,7 +6,6 @@ import NumberToken from "../../../../src/transpiler/parser/classes/token/number.
 import CharacterToken from "../../../../src/transpiler/parser/classes/token/character.js";
 import AlphanumericToken from "../../../../src/transpiler/parser/classes/token/alphanumeric.js";
 
-// $FlowFixMe flat
 const tokens = [
 	0,
 	1,
