@@ -25,9 +25,9 @@ repoco {
 
 					tolerateWord = "possible" space
 
-					ordinalNumeral = ("first"|"second"|"third"|"fourth"|"sixth"|"seventh") space
+					ordinalNumeral = ("first"|"second"|"third"|"fourth"|"fifth"|"sixth"|"seventh") space
 					relativeDescriber = ("next"|"last") space
-					cardinalNumeral = ("one"|"two"|"three"|"four"|"six"|"seven") space
+					cardinalNumeral = ("one"|"two"|"three"|"four"|"five"|"six"|"seven") space
 					digitWord = "digit" "s"? space
 					beWord = ("is"|"are") space*
 					digitList = nonemptyListOf<((range|upper|digit)+), (separators)> space*
