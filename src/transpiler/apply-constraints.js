@@ -12,8 +12,8 @@ export default (unfolded: AnnotatedVariant[]): $ReadOnlyArray<$ReadOnlyArray<str
 }: AnnotatedVariant): $ReadOnlyArray<string> => {
 	let realDigits = pattern;
 	const excluded = [
-		"optstart",
-		"optend",
+		"(",
+		")?",
 		"-",
 		" "
 	];
