@@ -3,7 +3,7 @@ import { type AnnotatedVariant } from "./parser/operations/unfold/variant.js";
 import determineRange from "./apply-constraints/determine-range.js";
 import getIndices from "./apply-constraints/get-indices.js";
 import cardinalToNumber from "./apply-constraints/cardinal-to-number.js";
-import sanitizeDigits from "./apply-constraints/sanitize-digits.js";
+import unfoldRanges from "./apply-constraints/unfold-ranges.js";
 import arrayReplace from "./utils/array-replace.js";
 
 export default (unfolded: AnnotatedVariant[]): $ReadOnlyArray<$ReadOnlyArray<string>> => unfolded.map(({
@@ -57,7 +57,7 @@ export default (unfolded: AnnotatedVariant[]): $ReadOnlyArray<$ReadOnlyArray<str
 
 			const lookaheadSymbol = type === "excluder" ? "!" : "=";
 
-			const constraintDigits = sanitizeDigits(rawConstraintDigits);
+			const constraintDigits = unfoldRanges(rawConstraintDigits);
 
 			const lookahead = `(?${lookaheadSymbol}(${constraintDigits.join("|")}))`;
 
