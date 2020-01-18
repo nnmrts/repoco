@@ -10,20 +10,22 @@ repoco {
 				alphanumeric = "x" repeater ?
 
 					repeater = "{" (repeaterRange | digit+) "}"
-
+                    
                     	repeaterRange = digit+ "," digit+
  
 				optional = "[" pattern "]"
 				customAny = ~("[" | "]" | "{" | "}" | space) any
 				safeSpace = ~(or) space ~(constraint|or)
 
-			constraint = (excluder|tolerator)
+			constraint = (excluder|tolerator|indexExcluder|indexTolerator)
 
 				excluder = excludeWord (ordinalNumeral|relativeDescriber) (cardinalNumeral)? digitWord beWord digitList+
+                indexExcluder = excludeWord (cardinalNumeral)? digitWord atIndex beWord digitList+
 
 					excludeWord = "impossible" space
 
 				tolerator = tolerateWord (ordinalNumeral|relativeDescriber) (cardinalNumeral)? digitWord beWord digitList+
+                indexTolerator = tolerateWord (cardinalNumeral)? digitWord atIndex beWord digitList+
 
 					tolerateWord = "possible" space
 
@@ -31,6 +33,7 @@ repoco {
 					relativeDescriber = ("next"|"last") space
 					cardinalNumeral = ("one"|"two"|"three"|"four"|"five"|"six"|"seven") space
 					digitWord = "digit" "s"? space
+                    atIndex = "at index" space digit+ space
 					beWord = ("is"|"are") space*
 					digitList = nonemptyListOf<((range|upper|digit)+), (separators)> space*
 						range = nonemptyListOf<((upper|digit)+), hyphen>
