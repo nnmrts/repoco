@@ -1,0 +1,46 @@
+// @flow
+import test, { type TestInterface } from "ava";
+
+import Token from "../../../../src/transpiler/parser/classes/token.js";
+import NumberToken from "../../../../src/transpiler/parser/classes/token/number.js";
+import CharacterToken from "../../../../src/transpiler/parser/classes/token/character.js";
+import AlphanumericToken from "../../../../src/transpiler/parser/classes/token/alphanumeric.js";
+
+// $FlowFixMe flat
+const tokens = [
+	0,
+	1,
+	100,
+	[
+		0,
+		0
+	],
+	[
+		0,
+		1
+	],
+	[
+		0,
+		100
+	]
+].map((amount: number | [number, number]): (NumberToken | CharacterToken | AlphanumericToken)[] => [
+	NumberToken,
+	CharacterToken,
+	AlphanumericToken
+].map((
+	CurrentToken: Class<NumberToken> | Class<CharacterToken> | Class<AlphanumericToken>
+): NumberToken | CharacterToken | AlphanumericToken => new CurrentToken(amount))).flat();
+
+test("is an array", (t: TestInterface) => {
+	for (let i = 0; i < tokens.length; i++) {
+		t.true(Array.isArray(tokens[i]));
+	}
+});
+
+test("throws on negative", (t: TestInterface) => {
+	for (let i = -1; i > -100; i--) {
+		t.throws(() => {
+			new Token("[A-Z]", i);
+		}, RangeError);
+	}
+});
