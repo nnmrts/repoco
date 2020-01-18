@@ -10,7 +10,7 @@ import Token from "../token.js";
  * @class NumberToken
  * @extends {Token<"[0-9]">}
  */
-export default class NumberToken extends Token<"[0-9]"> {
+export default class NumberToken extends Token<"[0-9]" | "([0-9])?"> {
 	/**
 	 * creates an instance of NumberToken
 	 * @author nnmrts <nanomiratus@gmail.com>
@@ -19,7 +19,7 @@ export default class NumberToken extends Token<"[0-9]"> {
 	 * amount
 	 * @memberof NumberToken
 	 */
-	constructor(amount: number) {
+	constructor(amount: number | [number, number]) {
 		super("[0-9]", amount);
 	}
 }

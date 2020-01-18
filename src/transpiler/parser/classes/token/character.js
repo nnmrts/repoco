@@ -10,7 +10,7 @@ import Token from "../token.js";
  * @class CharacterToken
  * @extends {Token<"[A-Z]">}
  */
-export default class CharacterToken extends Token<"[A-Z]"> {
+export default class CharacterToken extends Token<"[A-Z]" | "([A-Z])?"> {
 	/**
 	 * creates an instance of CharacterToken
 	 * @author nnmrts <nanomiratus@gmail.com>
@@ -19,7 +19,7 @@ export default class CharacterToken extends Token<"[A-Z]"> {
 	 * amount
 	 * @memberof CharacterToken
 	 */
-	constructor(amount: number) {
+	constructor(amount: number | [number, number]) {
 		super("[A-Z]", amount);
 	}
 }

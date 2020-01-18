@@ -34,5 +34,5 @@ export default Object.fromEntries<TokenKeys, TokenFunction>([
 	TokenFunction
 ] => [
 	entry[0],
-	(string: Node, repeater: Node): Tokens => new entry[1](repeater.unfold()[0])
+	(string: Node, repeater: Node): Tokens => new entry[1](repeater.unfold()[0] ? repeater.unfold()[0] : 1)
 ]));

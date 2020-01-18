@@ -8,7 +8,7 @@
  * @class Token
  * @extends {Array<S>}
  */
-export default class Token<S> extends Array<S> {
+export default class Token<S: string> extends Array<S> {
 	/**
 	 * creates an instance of Token
 	 * @author nnmrts <nanomiratus@gmail.com>
@@ -19,7 +19,13 @@ export default class Token<S> extends Array<S> {
 	 * amount
 	 * @memberof Token
 	 */
-	constructor(string: S, amount: number): Array<S> {
-		return Array<S>(amount).fill(string);
+	constructor(string: S, amount: number | [number, number]): Array<S> {
+		const token = Array<S>(Array.isArray(amount) ? amount[0] : amount).fill(string);
+
+		if (Array.isArray(amount)) {
+			token.push(...Array(amount[1] - amount[0]).fill(`(${string})?`));
+		}
+
+		return token;
 	}
 }
