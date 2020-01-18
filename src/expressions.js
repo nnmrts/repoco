@@ -2,7 +2,7 @@
 import { ago, atf, bdi, ben, bfa, bwa, caf, civ, cmr, cod, cog, com, cpv, dji, dza, egy, eri, esh, eth, gab, gha, gin, gmb, gnb, gnq, iot, ken, lbr, lby, lso, mar, mdg, mli, moz, mrt, mus, mwi, myt, nam, ner, nga, reu, rwa, sdn, sen, shn, sle, som, ssd, stp, swz, syc, tcd, tgo, tun, tza, uga, zaf, zmb, zwe } from "./expressions/africa.js";
 import { abw, aia, arg, atg, bes, bhs, blm, blz, bmu, bol, bra, brb, bvt, can, chl, col, cri, cub, cuw, cym, dma, dom, ecu, flk, glp, grd, grl, gtm, guf, guy, hnd, hti, jam, kna, lca, maf, mex, msr, mtq, nic, pan, per, pri, pry, sgs, slv, spm, sur, sxm, tca, tto, ury, usa, vct, ven, vgb, vir } from "./expressions/americas.js";
 import { ata } from "./expressions/antarctica.js";
-import { afg, are, arm, aze, bgd, bhr, brn, btn, chn, cyp, geo, idn, ind, irn, irq, isr, jor, jpn, kaz, kgz, khm, kor, kwt, lao, lbn, lka, mdv, mmr, mng, mys, npl, omn, pak, phl, prk, pse, qat, sau, sgp, syr, tha, tjk, tkm, tls, tur, uzb, vnm, yem } from "./expressions/asia.js";
+import { afg, are, arm, aze, bgd, bhr, brn, btn, chn, cyp, geo, hkg, idn, ind, irn, irq, isr, jor, jpn, kaz, kgz, khm, kor, kwt, lao, lbn, lka, mac, mdv, mmr, mng, mys, npl, omn, pak, phl, prk, pse, qat, sau, sgp, syr, tha, tjk, tkm, tls, tur, twn, uzb, vnm, yem } from "./expressions/asia.js";
 import { ala, alb, and, aut, bel, bgr, bih, blr, che, cze, deu, dnk, esp, est, fin, fra, fro, gbr, ggy, gib, grc, hrv, hun, imn, irl, isl, ita, jey, lie, ltu, lux, lva, mco, mda, mkd, mlt, mne, nld, nor, pol, prt, rou, rus, sjm, smr, srb, svk, svn, swe, ukr, vat } from "./expressions/europe.js";
 import { asm, aus, cck, cok, cxr, fji, fsm, gum, hmd, kir, mhl, mnp, ncl, nfk, niu, nru, nzl, pcn, plw, png, pyf, slb, tkl, ton, tuv, umi, vut, wlf, wsm } from "./expressions/oceania.js";
 
@@ -103,6 +103,7 @@ export {
 	guf,
 	gum,
 	guy,
+	hkg,
 	hmd,
 	hnd,
 	hrv,
@@ -141,6 +142,7 @@ export {
 	ltu,
 	lux,
 	lva,
+	mac,
 	maf,
 	mar,
 	mco,
@@ -233,6 +235,7 @@ export {
 	tun,
 	tur,
 	tuv,
+	twn,
 	tza,
 	uga,
 	ukr,
@@ -352,6 +355,7 @@ export default {
 	guf,
 	gum,
 	guy,
+	hkg,
 	hmd,
 	hnd,
 	hrv,
@@ -390,6 +394,7 @@ export default {
 	ltu,
 	lux,
 	lva,
+	mac,
 	maf,
 	mar,
 	mco,
@@ -482,6 +487,7 @@ export default {
 	tun,
 	tur,
 	tuv,
+	twn,
 	tza,
 	uga,
 	ukr,
