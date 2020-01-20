@@ -17,14 +17,22 @@ export default (path: string): RegExp => {
 	const definition = getText(path);
 
 	console.info(`\nPATH: ${path}`);
-	console.info("DEFINITION:");
+	console.info("\nDEFINITION:");
 	console.info(definition);
 
 	const unfolded = parser(definition);
 
+	console.info("\nunfolded:");
+	console.info(unfolded);
+
 	const constraintsApplied = applyConstraints(unfolded);
+	console.info("\nconstraintsApplied:");
+	console.info(constraintsApplied);
 
 	const minified = minify(constraintsApplied);
+
+	console.info("\nminified:");
+	console.info(minified);
 
 	const assembled = assemble(minified);
 
