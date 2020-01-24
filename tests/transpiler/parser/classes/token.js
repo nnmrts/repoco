@@ -40,6 +40,6 @@ test("throws on negative", (t: TestInterface) => {
 	for (let i = -1; i > -100; i--) {
 		t.throws(() => {
 			new Token("[A-Z]", i);
-		}, RangeError);
+		}, {instanceOf: RangeError});
 	}
 });
