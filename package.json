@@ -25,7 +25,7 @@
 		"@babel/preset-env": "^7.7.7",
 		"@babel/preset-flow": "^7.7.4",
 		"@babel/register": "^7.7.7",
-		"@pumpn/eslint-config": "^0.5.0",
+		"@pumpn/eslint-config": "^0.7.0",
 		"ava": "^3.0.0",
 		"eslint": "^6.8.0",
 		"flow-bin": "^0.116.1",
