@@ -1,5 +1,5 @@
 // @flow
-import type { PostVariant } from "../../types.js";
+import { type PostVariant } from "../../types.js";
 
 export default (variant: PostVariant): PostVariant => {
 	const combinedVariant = [];

@@ -1,10 +1,10 @@
 // @flow
-import type {
-	PreVariants,
-	PostVariants,
-	PostVariant,
-	PostDigits,
-	Digit
+import {
+	type PreVariants,
+	type PostVariants,
+	type PostVariant,
+	type PostDigits,
+	type Digit
 } from "./types.js";
 import preVariantsLevel from "./minify/pre-variants-level.js";
 import preVariantLevel from "./minify/pre-variant-level.js";

@@ -1,5 +1,5 @@
 // @flow
-import type { Digit } from "../types.js";
+import { type Digit } from "../types.js";
 
 import addQuantifiers from "./pre-digit-level/add-quantifiers.js";
 import cleanupPositiveLookaheads from "./pre-digit-level/cleanup-positive-lookaheads.js";

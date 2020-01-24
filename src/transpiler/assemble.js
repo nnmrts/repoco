@@ -1,7 +1,7 @@
 // @flow
 import findCommonPrefix from "./assemble/find-common-prefix.js";
 import reverseString from "./assemble/reverse-string.js";
-import type { PostVariants, PostDigits } from "./types.js";
+import { type PostVariants, type PostDigits } from "./types.js";
 
 export default (variants: PostVariants): RegExp => {
 	const newVariants = [];

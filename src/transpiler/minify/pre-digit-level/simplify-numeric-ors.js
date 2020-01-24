@@ -2,7 +2,7 @@
 import toRegexRange from "to-regex-range";
 
 import arrayUnique from "../../utils/array-unique.js";
-import type { Digit } from "../../types.js";
+import { type Digit } from "../../types.js";
 
 export default (digit: Digit): Digit => {
 	const regex = /\((([0-9]+)\|*)+\)/g;

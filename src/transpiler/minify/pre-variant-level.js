@@ -1,5 +1,5 @@
 // @flow
-import type { PostVariant } from "../types.js";
+import { type PostVariant } from "../types.js";
 
 import combineSuccessiveDigits from "./pre-variant-level/combine-successive-digits.js";
 

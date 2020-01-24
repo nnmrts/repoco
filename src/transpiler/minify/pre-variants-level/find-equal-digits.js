@@ -1,5 +1,5 @@
 // @flow
-import type { PreVariants, PreDigits } from "../../types.js";
+import { type PreVariants, type PreDigits } from "../../types.js";
 
 export type EqualDigits = {
 	[key: number]: $ReadOnlyArray<[number, number]>

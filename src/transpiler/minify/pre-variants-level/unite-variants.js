@@ -1,11 +1,11 @@
 // @flow
 import arrayUnite from "../../utils/array-unite.js";
-import type {
-	PreVariants,
-	PostVariants,
-	PostVariant,
-	PreDigits,
-	PostDigits
+import {
+	type PreVariants,
+	type PostVariants,
+	type PostVariant,
+	type PreDigits,
+	type PostDigits
 } from "../../types.js";
 import arrayDecast from "../../utils/array-decast.js";
 import arrayCast from "../../utils/array-cast.js";
