@@ -18,22 +18,35 @@ import cardinalToNumber from "./cardinal-to-number.js";
  * index
  */
 export default (position: Positional, length: number, index: number, amount: Cardinal): number => {
-	if (position === "last") {
-		return length - cardinalToNumber(amount) - 1;
-	}
-	if (position === "next") {
-		return index;
+	if (cardinalToNumber(amount) > length) {
+		throw new RangeError("amount is greater than length");
 	}
 
-	return [
-		"first",
-		"second",
-		"third",
-		"fourth",
-		"fifth",
-		"sixth",
-		"seventh",
-		"eigth",
-		"ninth"
-	].indexOf(position);
+	let result;
+
+	if (position === "last") {
+		result = length - cardinalToNumber(amount);
+	}
+	else if (position === "next") {
+		result = index;
+	}
+	else {
+		result = [
+			"first",
+			"second",
+			"third",
+			"fourth",
+			"fifth",
+			"sixth",
+			"seventh",
+			"eigth",
+			"ninth"
+		].indexOf(position);
+	}
+
+	if (result >= length) {
+		throw new RangeError("position is equal to or greater than length");
+	}
+
+	return result;
 };

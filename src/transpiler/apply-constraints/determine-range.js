@@ -12,8 +12,16 @@ export default (
 	index: number,
 	amount: Cardinal
 ): Range => {
+	if (cardinalToNumber(amount) > length) {
+		throw new RangeError("amount is greater than length");
+	}
+
 	const start = positionalToIndex(position, length, index, amount);
 	const end = start + cardinalToNumber(amount);
+
+	if (end > length) {
+		throw new RangeError("end is greater than length");
+	}
 
 	return [
 		start,
