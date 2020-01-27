@@ -87,6 +87,18 @@ test("quantifiers don't quantify rubbish", (t: TestInterface) => {
 		}
 	}
 });
+
+test("at index doesn't throw", (t: TestInterface) => {
+	for (let i = 1; i < 10; i++) {
+		const definitions = [
+			`n{${i * 2}} possible digits at index ${i} are 0-3`,
+			`n{${i * 2}} impossible digits at index ${i} are 0-3`,
+		];
+
+		for (let j = 0; j < definitions.length; j++) {
+			t.notThrows(() => {
+				parser(definitions[j]);
+			});
 		}
 	}
 });
