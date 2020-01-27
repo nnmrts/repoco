@@ -1,13 +1,9 @@
 // @flow
 import test, { type TestInterface } from "ava";
 
-import cardinalToNumber from "../../../src/transpiler/apply-constraints/cardinal-to-number";
+import cardinalToNumber from "../../../src/transpiler/apply-constraints/cardinal-to-number.js";
 
-test("defaults to 1", (t: TestInterface) => {
-	t.is(cardinalToNumber(), 1);
-});
-
-test("converts word to number", (t: TestInterface) => {
+test("converts cardinal word to number", (t: TestInterface) => {
 	const numberWords = [
 		"one",
 		"two",
