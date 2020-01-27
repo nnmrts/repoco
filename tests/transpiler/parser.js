@@ -64,7 +64,9 @@ test("quantifiers throw on negative", (t: TestInterface) => {
 		for (let j = 0; j < invalids.length; j++) {
 			t.throws(() => {
 				parser(invalids[j]);
-			}, {instanceOf: TypeError});
+			}, {
+				instanceOf: TypeError
+			});
 		}
 	}
 });
@@ -79,7 +81,12 @@ test("quantifiers don't quantify rubbish", (t: TestInterface) => {
 		for (let j = 0; j < invalids.length; j++) {
 			t.throws(() => {
 				parser(invalids[j]);
-			}, {instanceOf: TypeError});
+			}, {
+				instanceOf: TypeError
+			});
+		}
+	}
+});
 		}
 	}
 });

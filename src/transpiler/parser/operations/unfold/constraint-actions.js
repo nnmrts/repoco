@@ -36,7 +36,7 @@ export default Object.fromEntries<ConstraintKeys, ConstraintFunction>([
 	): Constraint => ({
 		type: rule,
 		position: position.children[0].sourceString,
-		amount: amount.children.length ? amount.children[0].children[0].sourceString : null,
+		amount: amount.children.length ? amount.children[0].children[0].sourceString : "one",
 		digits: digits.unfold()[0]
 	})
 ]));

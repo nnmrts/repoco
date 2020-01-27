@@ -6,7 +6,9 @@ import cardinalToNumber from "./apply-constraints/cardinal-to-number.js";
 import unfoldRanges from "./apply-constraints/unfold-ranges.js";
 import arrayReplace from "./utils/array-replace.js";
 
-export default (unfolded: AnnotatedVariant[]): $ReadOnlyArray<$ReadOnlyArray<string>> => unfolded.map(({
+export default (
+	unfolded: AnnotatedVariant[]
+): $ReadOnlyArray<$ReadOnlyArray<string>> => unfolded.map(({
 	pattern,
 	constraints
 }: AnnotatedVariant): $ReadOnlyArray<string> => {
@@ -39,9 +41,9 @@ export default (unfolded: AnnotatedVariant[]): $ReadOnlyArray<$ReadOnlyArray<str
 
 			const range = determineRange(
 				position,
-				amount || undefined,
 				digits.length,
-				currentIndex
+				currentIndex,
+				amount
 			);
 
 			currentIndex = range[1];

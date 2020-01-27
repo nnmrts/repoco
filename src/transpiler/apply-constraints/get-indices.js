@@ -6,19 +6,15 @@ import { type Pattern } from "../parser/operations/unfold/pattern.js";
  *
  * @param {string[]} array
  * array
- * @param {string} value
- * search value
+ * @param {string} testValue
+ * test value
  * @returns {number[]}
  * indices
  */
-export default (array: Pattern, value: string): number[] => {
-	const indices = [];
-
-	for (let i = 0; i < array.length; i++) {
-		if (array[i] === value) {
-			indices.push(i);
-		}
-	}
-
-	return indices;
-};
+export default (array: Pattern, testValue: string): number[] => array
+	.map((value: string, index: number): [string, number] => [
+		value,
+		index
+	])
+	.filter((value: [string, number]): boolean => value[0] === testValue)
+	.map((value: [string, number]): number => value[1]);
