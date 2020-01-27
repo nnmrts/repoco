@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "ava",
 		"build": "parcel build src/index.js",
-		"start": "yarn build && node dist/index.js"
+		"start": "yarn build && node dist/index.js",
+		"cov": "nyc --reporter=lcov --reporter=text-summary ava"
 	},
 	"repository": "https://github.com/nnmrts/repoco",
 	"license": "MIT",
@@ -33,6 +34,7 @@
 		"eslint": "^6.8.0",
 		"flow-bin": "^0.116.1",
 		"husky": "^4.2.1",
+		"nyc": "^15.0.0",
 		"parcel": "^2.0.0-alpha.3.2"
 	},
 	"ava": {
