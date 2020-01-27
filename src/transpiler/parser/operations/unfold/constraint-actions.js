@@ -2,12 +2,14 @@
 /* eslint no-unused-vars: ["error", { "args": "none" }] */
 import { Node } from "ohm-js";
 
-type ConstraintKeys = "excluder" | "tolerator";
+import { type Positional, type Cardinal } from "../../../types.js";
+
+export type ConstraintKeys = "excluder" | "tolerator" | "indexExcluder" | "indexTolerator";
 
 export type Constraint = {|
 	type: ConstraintKeys,
-	position: string,
-	amount: ?string,
+	position: Positional,
+	amount: Cardinal,
 	digits: string[]
 |};
 

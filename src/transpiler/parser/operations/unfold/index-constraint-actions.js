@@ -4,7 +4,7 @@ import { Node } from "ohm-js";
 
 import indexToPositional from "../../../apply-constraints/index-to-positional.js";
 
-type ConstraintKeys = "indexExcluder" | "indexTolerator";
+import { type Constraint, type ConstraintKeys } from "./constraint-actions.js";
 
 export type Constraint = {|
 	type: ConstraintKeys,

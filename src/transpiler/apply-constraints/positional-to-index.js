@@ -1,10 +1,12 @@
 // @flow
+import { type Positional, type Cardinal } from "../types.js";
+
 import cardinalToNumber from "./cardinal-to-number.js";
 
 /**
  *
  *
- * @param {string} position
+ * @param {Positional} position
  * position
  * @param {number} length
  * length
@@ -15,7 +17,7 @@ import cardinalToNumber from "./cardinal-to-number.js";
  * @returns {number}
  * index
  */
-export default (position: string, length: number, index: number, amount: ?string = "one"): number => {
+export default (position: Positional, length: number, index: number, amount: Cardinal): number => {
 	if (position === "last") {
 		return length - cardinalToNumber(amount) - 1;
 	}

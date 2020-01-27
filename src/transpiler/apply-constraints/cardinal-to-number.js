@@ -1,13 +1,15 @@
 // @flow
+import { type Cardinal } from "../types.js";
+
 /**
  *
  *
- * @param {?string} [string="one"]
+ * @param {Cardinal} string
  * string
  * @returns {number}
  * number
  */
-export default (string: ?string = "one"): number => [
+export default (string: Cardinal): number => [
 	"one",
 	"two",
 	"three",

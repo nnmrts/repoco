@@ -1,4 +1,5 @@
 // @flow
+import { type Positional } from "../types.js";
 /**
  *
  *
@@ -7,7 +8,7 @@
  * @returns {string}
  * string
  */
-export default (number: number = 0): string => [
+export default (number: number): Positional => [
 	"first",
 	"second",
 	"third",
