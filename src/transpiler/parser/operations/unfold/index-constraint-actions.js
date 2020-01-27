@@ -6,13 +6,6 @@ import indexToPositional from "../../../apply-constraints/index-to-positional.js
 
 import { type Constraint, type ConstraintKeys } from "./constraint-actions.js";
 
-export type Constraint = {|
-	type: ConstraintKeys,
-	position: string,
-	amount: ?string,
-	digits: string[]
-|};
-
 type ConstraintFunction = () => Constraint;
 
 export default Object.fromEntries<ConstraintKeys, ConstraintFunction>([
