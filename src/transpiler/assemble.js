@@ -3,6 +3,10 @@ import findCommonPrefix from "./assemble/find-common-prefix.js";
 import reverseString from "./assemble/reverse-string.js";
 import { type PostVariants, type PostDigits } from "./types.js";
 
+/**
+ * @example
+ * @param variants
+ */
 export default (variants: PostVariants): RegExp => {
 	const newVariants = [];
 

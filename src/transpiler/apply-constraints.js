@@ -5,6 +5,11 @@ import getIndices from "./apply-constraints/get-indices.js";
 import cardinalToNumber from "./apply-constraints/cardinal-to-number.js";
 import unfoldRange from "./apply-constraints/unfold-range.js";
 
+/**
+ * @example
+ * @param unfolded
+ * @returns
+ */
 export default (
 	unfolded: AnnotatedVariant[]
 ): $ReadOnlyArray<$ReadOnlyArray<string>> => unfolded.map(({

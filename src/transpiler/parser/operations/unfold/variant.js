@@ -10,6 +10,13 @@ export type AnnotatedVariant = {|
 	constraints: Constraint[]
 |};
 
+/**
+ * @example
+ * @param patternNode
+ * @param spaces1
+ * @param constraints
+ * @param spaces2
+ */
 export default (
 	patternNode: Node,
 	spaces1: Node,

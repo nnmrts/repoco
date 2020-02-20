@@ -1,6 +1,10 @@
 // @flow
 import { type Digit } from "../../types.js";
 
+/**
+ * @example
+ * @param digit
+ */
 export default (digit: Digit): Digit => {
 	const regex = /(\[([0-9A-Z](-[0-9A-Z])?)+\])\1+/g;
 

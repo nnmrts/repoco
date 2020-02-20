@@ -2,14 +2,13 @@
 import { type Pattern } from "../parser/operations/unfold/pattern.js";
 
 /**
- *
- *
- * @param {string[]} array
- * array
- * @param {string} testValue
- * test value
+ * @param {string[]} array -
+ * array.
+ * @param {string} testValue -
+ * test value.
  * @returns {number[]}
- * indices
+ * indices.
+ * @example
  */
 export default (array: Pattern, testValue: string): number[] => array
 	.map((value: string, index: number): [string, number] => [value, index])

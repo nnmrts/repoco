@@ -8,16 +8,18 @@ import Token from "../token.js";
  * @date 2019-12-16
  * @export
  * @class CharacterToken
- * @extends {Token<"[A-Z]">}
+ * @augments {Token<"[A-Z]">}
  */
 export default class CharacterToken extends Token<"[A-Z]" | "([A-Z])?"> {
 	/**
-	 * creates an instance of CharacterToken
+	 * Creates an instance of CharacterToken.
+	 *
 	 * @author nnmrts <nanomiratus@gmail.com>
 	 * @date 2019-12-16
-	 * @param {number} amount
-	 * amount
+	 * @param {number} amount -
+	 * amount.
 	 * @memberof CharacterToken
+	 * @example
 	 */
 	constructor(amount: number | [number, number]) {
 		super("[A-Z]", amount);

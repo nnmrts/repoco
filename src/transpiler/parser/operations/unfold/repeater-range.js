@@ -2,6 +2,12 @@
 /* eslint no-unused-vars: ["error", { "args": "none" }] */
 import { Node } from "ohm-js";
 
+/**
+ * @example
+ * @param digit1
+ * @param comma
+ * @param digit2
+ */
 export default (
 	digit1: Node,
 	comma: Node,

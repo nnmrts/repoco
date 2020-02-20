@@ -8,16 +8,18 @@ import Token from "../token.js";
  * @date 2019-12-16
  * @export
  * @class AlphanumericToken
- * @extends {Token<"[A-Z]">}
+ * @augments {Token<"[A-Z]">}
  */
 export default class AlphanumericToken extends Token<"[A-Z0-9]" | "([A-Z0-9])?"> {
 	/**
-	 * creates an instance of AlphanumericToken
+	 * Creates an instance of AlphanumericToken.
+	 *
 	 * @author nnmrts <nanomiratus@gmail.com>
 	 * @date 2019-12-16
-	 * @param {number} amount
-	 * amount
+	 * @param {number} amount -
+	 * amount.
 	 * @memberof AlphanumericToken
+	 * @example
 	 */
 	constructor(amount: number | [number, number]) {
 		super("[0-9A-Z]", amount);

@@ -6,6 +6,10 @@ import cleanupPositiveLookaheads from "./pre-digit-level/cleanup-positive-lookah
 import simplifyNumberOrs from "./pre-digit-level/simplify-numeric-ors.js";
 import cleanupNegativeLookaheads from "./pre-digit-level/cleanup-negative-lookaheads.js";
 
+/**
+ * @example
+ * @param digit
+ */
 export default (digit: Digit): Digit => {
 	const positiveLookaheadsCleanedUp = cleanupPositiveLookaheads(digit);
 	const negativeLookaheadsCleanedUp = cleanupNegativeLookaheads(positiveLookaheadsCleanedUp);

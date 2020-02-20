@@ -2,6 +2,11 @@
 /* eslint no-unused-vars: ["error", { "args": "none" }] */
 import { Node } from "ohm-js";
 
+/**
+ * @example
+ * @param digitLists
+ * @param space
+ */
 export default (digitLists: Node, space: Node): string[] => digitLists.children
 	.map((digitList: Node, index: number): string[] => {
 		const digits = digitList.children

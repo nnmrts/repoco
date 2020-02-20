@@ -4,6 +4,10 @@ import toRegexRange from "to-regex-range";
 import arrayUnique from "../../utils/array-unique.js";
 import { type Digit } from "../../types.js";
 
+/**
+ * @example
+ * @param digit
+ */
 export default (digit: Digit): Digit => {
 	const regex = /\((([0-9]+)\|*)+\)/g;
 

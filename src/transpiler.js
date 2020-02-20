@@ -6,12 +6,11 @@ import minify from "./transpiler/minify.js";
 import assemble from "./transpiler/assemble.js";
 
 /**
- *
- *
- * @param {string} path
- * path
+ * @param {string} path -
+ * path.
  * @returns {Promise<string>}
- * transpiled
+ * transpiled.
+ * @example
  */
 export default (path: string): RegExp => {
 	const definition = getText(path);

@@ -2,12 +2,11 @@
 import { type Cardinal } from "../types.js";
 
 /**
- *
- *
- * @param {number} number
- * number
- * @returns {number}
- * number
+ * @param number -
+ * number.
+ * @returns
+ * number.
+ * @example
  */
 export default (number: number = 1): Cardinal => [
 	"one",

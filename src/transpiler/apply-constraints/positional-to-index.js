@@ -4,18 +4,17 @@ import { type Positional, type Cardinal } from "../types.js";
 import cardinalToNumber from "./cardinal-to-number.js";
 
 /**
- *
- *
- * @param {Positional} position
- * position
- * @param {number} length
- * length
- * @param {number} index
- * index
- * @param {?string} [amount="one"]
- * amount
+ * @param {Positional} position -
+ * position.
+ * @param {number} length -
+ * length.
+ * @param {number} index -
+ * index.
+ * @param {?string} [amount] -
+ * amount.
  * @returns {number}
- * index
+ * index.
+ * @example
  */
 export default (position: Positional, length: number, index: number, amount: Cardinal): number => {
 	if (cardinalToNumber(amount) > length) {

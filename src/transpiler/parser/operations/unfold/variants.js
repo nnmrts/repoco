@@ -4,6 +4,10 @@ import { Node } from "ohm-js";
 
 import { type AnnotatedVariant } from "./variant.js";
 
+/**
+ * @example
+ * @param variants
+ */
 export default (variants: Node): AnnotatedVariant[] => {
 	const newVariants = variants.children[0].children
 		.map((variant: Node): AnnotatedVariant => variant.unfold())

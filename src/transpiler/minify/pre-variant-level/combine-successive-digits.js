@@ -1,6 +1,10 @@
 // @flow
 import { type PostVariant } from "../../types.js";
 
+/**
+ * @example
+ * @param variant
+ */
 export default (variant: PostVariant): PostVariant => {
 	const combinedVariant = [];
 

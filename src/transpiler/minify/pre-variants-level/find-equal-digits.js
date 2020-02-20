@@ -6,12 +6,11 @@ export type EqualDigits = {
 };
 
 /**
- *
- *
- * @param {Digits[]} digitsArray
- * digits
+ * @param {Digits[]} variants -
+ * digits.
  * @returns {$ReadOnlyArray<[number, [number, number]]>}
- * all the equal digits
+ * all the equal digits.
+ * @example
  */
 export default (variants: PreVariants): EqualDigits => {
 	const lengthMax = Math.max(...variants.map((digits: PreDigits): number => digits.length));

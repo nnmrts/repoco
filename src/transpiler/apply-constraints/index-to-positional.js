@@ -1,12 +1,12 @@
 // @flow
 import { type Positional } from "../types.js";
+
 /**
- *
- *
- * @param {number} [number=0]
- * number
+ * @param {number} [number] -
+ * number.
  * @returns {string}
- * string
+ * string.
+ * @example
  */
 export default (number: number): Positional => [
 	"first",

@@ -9,12 +9,11 @@ export type ChainedEqualDigits = {
 };
 
 /**
- *
- *
- * @param {Digits[]} digitsArray
- * digits
+ * @param {Digits[]} digitsArray -
+ * digits.
  * @returns {ChainedEqualDigits}
- * chained digits
+ * chained digits.
+ * @example
  */
 export default (digitsArray: PreVariants): ChainedEqualDigits => {
 	const equalDigits = findEqualDigits(digitsArray);

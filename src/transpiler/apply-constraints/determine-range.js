@@ -6,6 +6,13 @@ import positionalToIndex from "./positional-to-index.js";
 
 type Range = [number, number];
 
+/**
+ * @example
+ * @param position
+ * @param length
+ * @param index
+ * @param amount
+ */
 export default (
 	position: Positional,
 	length: number,

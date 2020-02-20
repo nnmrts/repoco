@@ -1,11 +1,12 @@
 // @flow
 /**
- * @param {string} string1
- * string
- * @param {string} string2
- * string
+ * @param {string} string1 -
+ * string.
+ * @param {string} string2 -
+ * string.
  * @returns {number}
- * the levenshtein distance
+ * the levenshtein distance.
+ * @example
  */
 export default (string1: string, string2: string): number => {
 	// Create empty edit distance matrix for all possible modifications of

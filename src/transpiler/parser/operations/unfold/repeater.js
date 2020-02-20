@@ -2,6 +2,12 @@
 /* eslint no-unused-vars: ["error", { "args": "none" }] */
 import { Node } from "ohm-js";
 
+/**
+ * @example
+ * @param curlyBracketLeft
+ * @param amountOrRange
+ * @param curlyBracketRight
+ */
 export default (
 	curlyBracketLeft: Node,
 	amountOrRange: Node,

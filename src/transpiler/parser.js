@@ -5,12 +5,11 @@ import operations from "./parser/operations.js";
 import { type AnnotatedVariant } from "./parser/operations/unfold/variant.js";
 
 /**
- *
- *
- * @param {string} definition
- * definition
+ * @param {string} definition -
+ * definition.
  * @returns {Promise<string>}
- * unfolded
+ * unfolded.
+ * @example
  */
 export default (definition: string): AnnotatedVariant[] => {
 	const match = grammar.match(definition);

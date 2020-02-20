@@ -12,6 +12,10 @@ import preDigitsLevel from "./minify/pre-digits-level.js";
 import preDigitLevel from "./minify/pre-digit-level.js";
 import postDigitsLevel from "./minify/post-digits-level.js";
 
+/**
+ * @example
+ * @param constraintsApplied
+ */
 export default (constraintsApplied: PreVariants): PostVariants => {
 	// pre variants level
 

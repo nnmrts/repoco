@@ -8,16 +8,18 @@ import Token from "../token.js";
  * @date 2019-12-16
  * @export
  * @class NumberToken
- * @extends {Token<"[0-9]">}
+ * @augments {Token<"[0-9]">}
  */
 export default class NumberToken extends Token<"[0-9]" | "([0-9])?"> {
 	/**
-	 * creates an instance of NumberToken
+	 * Creates an instance of NumberToken.
+	 *
 	 * @author nnmrts <nanomiratus@gmail.com>
 	 * @date 2019-12-16
-	 * @param {number} amount
-	 * amount
+	 * @param {number} amount -
+	 * amount.
 	 * @memberof NumberToken
+	 * @example
 	 */
 	constructor(amount: number | [number, number]) {
 		super("[0-9]", amount);

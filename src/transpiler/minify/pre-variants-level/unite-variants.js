@@ -13,14 +13,13 @@ import arrayCast from "../../utils/array-cast.js";
 import { type ChainedEqualDigits } from "./chain-equal-digits.js";
 
 /**
- *
- *
- * @param {Digits[]} digits
- * digits
- * @param {ChainedEqualDigits} chainedEqualDigits
- * chained digits
+ * @param {Digits[]} digits -
+ * digits.
+ * @param {ChainedEqualDigits} chainedEqualDigits -
+ * chained digits.
  * @returns {Digits[]}
- * united digits
+ * united digits.
+ * @example
  */
 export default (
 	digits: PreVariants,

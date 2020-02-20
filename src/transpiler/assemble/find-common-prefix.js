@@ -1,4 +1,8 @@
 // @flow
+/**
+ * @example
+ * @param strings
+ */
 export default (strings: string[]): string => {
 	if (!strings.length) {
 		return "";
