@@ -3,8 +3,7 @@ import { type AnnotatedVariant } from "./parser/operations/unfold/variant.js";
 import determineRange from "./apply-constraints/determine-range.js";
 import getIndices from "./apply-constraints/get-indices.js";
 import cardinalToNumber from "./apply-constraints/cardinal-to-number.js";
-import unfoldRanges from "./apply-constraints/unfold-ranges.js";
-import arrayReplace from "./utils/array-replace.js";
+import unfoldRange from "./apply-constraints/unfold-range.js";
 
 export default (
 	unfolded: AnnotatedVariant[]
@@ -55,13 +54,16 @@ export default (
 
 			const lookaheadSymbol = type === "excluder" ? "!" : "=";
 
-			const constraintDigits = unfoldRanges(rawConstraintDigits);
+			const constraintDigits = [...rawConstraintDigits]
+				.map(unfoldRange)
+				.flatMap((digitRange: string[]): string[] => digitRange)
+				.sort((a: string, b: string): number => a.length - b.length || a.localeCompare(b));
 
 			const lookahead = `(?${lookaheadSymbol}(${constraintDigits.join("|")}))`;
 
 			const currentDigits = digits.slice(...range);
 
-			if (constraintDigits[0].length === 1) {
+			if (constraintDigits.every((digit: string): boolean => digit.length === 1)) {
 				partitionedDigits[range[0]] = currentDigits
 					.map((digit: string): string => `(${lookahead}(${digit}))`)
 					.join("");
