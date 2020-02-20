@@ -51,7 +51,11 @@
 			}
 		},
 		"verbose": true,
-		"failFast": false
+		"failFast": false,
+		"files": [
+			"!**/data.js",
+			"!**/data/*.js"
+		]
 	},
 	"husky": {
 		"hooks": {
