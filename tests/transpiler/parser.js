@@ -7,22 +7,19 @@ import parser from "../../src/transpiler/parser.js";
 
 const paths = [];
 
-for (let i = 0; i < Object.keys(geoscheme).length; i++) {
-	const continentName = Object.keys(geoscheme)[i];
+for (const continentName in geoscheme) {
 	const continent = geoscheme[continentName];
-	for (let j = 0; j < Object.keys(continent).length; j++) {
-		const regionName = Object.keys(continent)[j];
+	for (const regionName in continent) {
 		const region = continent[regionName];
-		for (let k = 0; k < region.length; k++) {
-			const country = region[k];
-			paths.push(`./src/expressions/${continentName}/${regionName}/${country}.js`);
+		for (const countryCode of region) {
+			paths.push(`./src/expressions/${continentName}/${regionName}/${countryCode}.js`);
 		}
 	}
 }
 
 test("returns array", (t: TestInterface) => {
-	for (let i = 0; i < paths.length; i++) {
-		const definition = getText(paths[i]);
+	for (const path of paths) {
+		const definition = getText(path);
 
 		if (!Array.isArray(parser(definition))) {
 			t.fail();
@@ -61,9 +58,9 @@ test("quantifiers throw on negative", (t: TestInterface) => {
 			`x{${-i}}`
 		];
 
-		for (let j = 0; j < invalids.length; j++) {
+		for (const invalid of invalids) {
 			t.throws(() => {
-				parser(invalids[j]);
+				parser(invalid);
 			}, {
 				instanceOf: TypeError
 			});
@@ -78,9 +75,9 @@ test("quantifiers don't quantify rubbish", (t: TestInterface) => {
 			`{${i}}`
 		];
 
-		for (let j = 0; j < invalids.length; j++) {
+		for (const invalid of invalids) {
 			t.throws(() => {
-				parser(invalids[j]);
+				parser(invalid);
 			}, {
 				instanceOf: TypeError
 			});
@@ -95,9 +92,9 @@ test("at index doesn't throw", (t: TestInterface) => {
 			`n{${i * 2}} impossible digits at index ${i} are 0-3`,
 		];
 
-		for (let j = 0; j < definitions.length; j++) {
+		for (const definition of definitions) {
 			t.notThrows(() => {
-				parser(definitions[j]);
+				parser(definition);
 			});
 		}
 	}

@@ -15,11 +15,9 @@ import { type AnnotatedVariant } from "./parser/operations/unfold/variant.js";
 export default (definition: string): AnnotatedVariant[] => {
 	const match = grammar.match(definition);
 
-	for (let i = 0; i < Object.keys(operations).length; i++) {
-		const key = Object.keys(operations)[i];
-
-		if (!semantics(match)[key]) {
-			semantics.addOperation(`${key}()`, operations[key]);
+	for (const operationKey in operations) {
+		if (!semantics(match)[operationKey]) {
+			semantics.addOperation(`${operationKey}()`, operations[operationKey]);
 		}
 	}
 

@@ -12,8 +12,7 @@ export default (digit: Digit): Digit => {
 	const matches = newDigit.match(regex);
 
 	if (matches) {
-		for (let matchIndex = 0; matchIndex < matches.length; matchIndex++) {
-			const realMatch = matches[matchIndex];
+		for (const realMatch of matches) {
 			const match = realMatch.split(/\(|\||\)/).slice(1, -1);
 
 			const digitLength = match[0].length;
@@ -24,9 +23,8 @@ export default (digit: Digit): Digit => {
 
 			let currentRange = [];
 
-			for (let numberIndex = 0; numberIndex < numbers.length; numberIndex++) {
-				const currentNumber = numbers[numberIndex];
-				const nextNumber = numbers[numberIndex + 1];
+			for (const [i, currentNumber] of numbers.entries()) {
+				const nextNumber = numbers[i + 1];
 
 				currentRange.push(currentNumber);
 
@@ -38,15 +36,10 @@ export default (digit: Digit): Digit => {
 
 			const safeRanges = [];
 
-			for (let i = 0; i < ranges.length; i++) {
-				const range = ranges[i];
-
+			for (const range of ranges) {
 				if (range.length === 2) {
-					for (let j = 0; j < range.length; j++) {
-						const number = range[j];
-						safeRanges.push([
-							number
-						]);
+					for (const number of range) {
+						safeRanges.push([number]);
 					}
 				}
 				else {
@@ -80,9 +73,8 @@ export default (digit: Digit): Digit => {
 					]);
 
 				if (successiveNumbers) {
-					for (let i = 0; i < successiveNumbers.length; i++) {
-						const currentMatch = successiveNumbers[i];
-						simplified = simplified.replace(currentMatch[0], currentMatch[1]);
+					for (const succesiveNumber of successiveNumbers) {
+						simplified = simplified.replace(succesiveNumber[0], succesiveNumber[1]);
 					}
 				}
 
@@ -126,12 +118,12 @@ export default (digit: Digit): Digit => {
 
 							compactVariant[i] = [];
 
-							for (let j = 0; j < digitsOnIndex.length; j++) {
+							for (const [j, digitOnIndex] of digitsOnIndex.entries()) {
 								if (
 									splitUpRanges[j][smallestVarianceIndex] === variant
 								) {
 									if (Array.isArray(compactVariant[i])) {
-										compactVariant[i].push(digitsOnIndex[j]);
+										compactVariant[i].push(digitOnIndex);
 									}
 								}
 							}

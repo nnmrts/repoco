@@ -6,10 +6,10 @@ export default (variant: PostVariant): PostVariant => {
 
 	let currentChunk = [];
 
-	for (let i = 0; i < variant.length; i++) {
-		currentChunk.push(variant[i]);
+	for (const [i, digits] of variant.entries()) {
+		currentChunk.push(digits);
 
-		if (variant[i + 1] !== variant[i]) {
+		if (variant[i + 1] !== digits) {
 			if (!Array.isArray(currentChunk[0])) {
 				currentChunk = currentChunk.join("");
 			}

@@ -22,21 +22,14 @@ export default (digitsArray: PreVariants): EqualDigits => {
 		const arraysWithLength = [];
 		const originalIndices = [];
 
-		for (let digitsIndex = 0; digitsIndex < digitsArray.length; digitsIndex++) {
-			const digits = digitsArray[digitsIndex];
-
+		for (const [i, digits] of variants.entries()) {
 			if (digits.length === lengthIndex) {
 				arraysWithLength.push(digits);
-				originalIndices.push(digitsIndex);
+				originalIndices.push(i);
 			}
 		}
 
-		for (
-			let sameLengthIndex = 0;
-			sameLengthIndex < arraysWithLength.length;
-			sameLengthIndex++
-		) {
-			const digits = arraysWithLength[sameLengthIndex];
+		for (const [sameLengthIndex, digits] of arraysWithLength.entries()) {
 			const digitsBefore = arraysWithLength[sameLengthIndex - 1];
 
 			for (let i = 0; i < lengthIndex; i++) {

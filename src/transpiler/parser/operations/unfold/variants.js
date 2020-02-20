@@ -18,12 +18,12 @@ export default (variants: Node): AnnotatedVariant[] => {
 			let newPattern = pattern;
 			let added = 0;
 
-			for (let i = 0; i < pattern.length; i++) {
-				if (Array.isArray(pattern[i])) {
+			for (const [i, token] of pattern.entries()) {
+				if (Array.isArray(token)) {
 					newPattern = [
 						...newPattern.slice(0, i + added),
 						"(",
-						...pattern[i],
+						...token,
 						")?",
 						...newPattern.slice(i + 1 + added)
 					];

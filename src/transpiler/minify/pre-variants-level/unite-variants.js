@@ -32,14 +32,14 @@ export default (
 
 	let variantIndicesWithEqualDigits = [];
 
-	for (let i = 0; i < equalPositions.length; i++) {
-		const position = Number(equalPositions[i]);
-		const variants = chainedEqualDigits[Number(position)]
+	for (const position of equalPositions) {
+		const positionNumber = Number(position);
+		const variants = chainedEqualDigits[positionNumber]
 			.map((index: number): PreDigits => digits[index]);
 
-		variantIndicesWithEqualDigits.push(...chainedEqualDigits[Number(position)]);
+		variantIndicesWithEqualDigits.push(...chainedEqualDigits[positionNumber]);
 
-		const united = arrayUnite(position, ...variants);
+		const united = arrayUnite(positionNumber, ...variants);
 
 		const unitedDigits: PostVariant = united
 			.map((digit: PostDigits): PostDigits => {
@@ -61,9 +61,9 @@ export default (
 
 	const missingVariants = [];
 
-	for (let i = 0; i < digits.length; i++) {
+	for (const [i, digit] of digits.entries()) {
 		if (!variantIndicesWithEqualDigits.includes(i)) {
-			missingVariants.push(digits[i]);
+			missingVariants.push(digit);
 		}
 	}
 

@@ -29,15 +29,13 @@ export default (
 
 		const constraintIndices = [];
 
-		for (let i = 0; i < constraints.length; i++) {
+		for (const constraint of constraints) {
 			const {
-				[i]: {
 					position,
 					amount,
 					type,
 					digits: rawConstraintDigits
-				}
-			} = constraints;
+			} = constraint;
 
 			const range = determineRange(
 				position,
@@ -86,8 +84,8 @@ export default (
 			getIndices(pattern, string).map((index: number): number => {
 				let newIndex = index;
 
-				for (let i = 0; i < constraintIndices.length; i++) {
-					if (constraintIndices[i][0] <= index && constraintIndices[i][1] > 1) {
+				for (const constraintIndex of constraintIndices) {
+					if (constraintIndex[0] <= index && constraintIndex[1] > 1) {
 						newIndex -= 1;
 					}
 				}
@@ -96,19 +94,10 @@ export default (
 			})
 		]);
 
-		for (let i = 0; i < missingIndices.length; i++) {
-			const {
-				[i]: [
-					entryString,
-					entryIndices
-				]
-			} = missingIndices;
+		for (const entry of missingIndices) {
+			const [entryString, entryIndices] = entry;
 
-			for (let j = 0; j < entryIndices.length; j++) {
-				const {
-					[j]: entryIndex
-				} = entryIndices;
-
+			for (const entryIndex of entryIndices) {
 				realDigits = arrayReplace(
 					realDigits,
 					entryIndex,

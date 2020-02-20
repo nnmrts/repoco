@@ -32,15 +32,15 @@ const patterns = [
 ];
 
 test("result is never bigger than original pattern", (t: TestInterface) => {
-	for (let i = 0; i < patterns.length; i++) {
-		for (let j = 0; j < tokens.length; j++) {
-			t.true(getIndices(patterns[i], tokens[j]).length <= patterns[i].length);
+	for (const pattern of patterns) {
+		for (const token of tokens) {
+			t.true(getIndices(pattern, token).length <= pattern.length);
 		}
 	}
 });
 
 test("returns empty array when test value is not found", (t: TestInterface) => {
-	for (let i = 0; i < patterns.length; i++) {
-		t.deepEqual(getIndices(patterns[i], "a"), []);
+	for (const pattern of patterns) {
+		t.deepEqual(getIndices(pattern, "a"), []);
 	}
 });

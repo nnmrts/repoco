@@ -19,24 +19,24 @@ export default (constraintsApplied: PreVariants): PostVariants => {
 
 	const newVariants: PostVariant[] = [];
 
-	for (let digitsIndex = 0; digitsIndex < variants.length; digitsIndex++) {
+	for (let variant of variants) {
 		// pre variant level
 
-		const variant = preVariantLevel(variants[digitsIndex]);
+		variant = preVariantLevel(variant);
 
 		const newVariant: PostDigits[] = [];
 
-		for (let digitIndex = 0; digitIndex < variant.length; digitIndex++) {
+		for (let digits of variant) {
 			// pre digits level
 
-			const digits = preDigitsLevel(variant[digitIndex]);
+			digits = preDigitsLevel(digits);
 
 			const newDigits: Digit[] = [];
 
-			for (let i = 0; i < digits.length; i++) {
+			for (let digit of digits) {
 				// pre digit level
 
-				const digit = preDigitLevel(digits[i]);
+				digit = preDigitLevel(digit);
 
 				const newDigit: Digit = digit;
 

@@ -44,9 +44,9 @@ test("position equal to or greater than length throws", (t: TestInterface) => {
 });
 
 test("amount greater than length throws", (t: TestInterface) => {
-	for (let i = 0; i < positions.length; i++) {
+	for (const position of positions) {
 		t.throws(() => {
-			determineRange(positions[i], 8, 0, "nine");
+			determineRange(position, 8, 0, "nine");
 		}, {
 			instanceOf: RangeError,
 			message: "amount is greater than length"

@@ -31,8 +31,8 @@ const tokens = [
 ): NumberToken | CharacterToken | AlphanumericToken => new CurrentToken(amount))).flat();
 
 test("is an array", (t: TestInterface) => {
-	for (let i = 0; i < tokens.length; i++) {
-		t.true(Array.isArray(tokens[i]));
+	for (const token of tokens) {
+		t.true(Array.isArray(token));
 	}
 });
 

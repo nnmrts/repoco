@@ -7,8 +7,7 @@ export default (strings: string[]): string => {
 	let string1 = strings[0];
 	let string2 = strings[strings.length - 1];
 
-	for (let i = 0; i < strings.length; i++) {
-		const string = strings[i];
+	for (const string of strings) {
 		string1 = string1 < string ? string : string1;
 		string2 = string2 > string ? string : string2;
 	}

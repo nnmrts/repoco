@@ -16,7 +16,7 @@ test("converts cardinal word to number", (t: TestInterface) => {
 		"nine"
 	];
 
-	for (let i = 0; i < numberWords.length; i++) {
-		t.is(cardinalToNumber(numberWords[i]), i + 1);
+	for (const [i, numberWord] of numberWords.entries()) {
+		t.is(cardinalToNumber(numberWord), i + 1);
 	}
 });

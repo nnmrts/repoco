@@ -6,9 +6,7 @@ import { type PostVariants, type PostDigits } from "./types.js";
 export default (variants: PostVariants): RegExp => {
 	const newVariants = [];
 
-	for (let i = 0; i < variants.length; i++) {
-		const variant = variants[i];
-
+	for (const variant of variants) {
 		if (variant.filter((digits: PostDigits): boolean => Array.isArray(digits)).length !== 0) {
 			const firstArrayInVariant = variant.filter((digits: PostDigits): boolean => Array.isArray(digits))[0];
 

@@ -29,19 +29,17 @@ export default (digitsArray: PreVariants): ChainedEqualDigits => {
 		[]
 	]));
 
-	for (let positionIndex = 0; positionIndex < positions.length; positionIndex++) {
-		const position = Number(positions[positionIndex]);
-		const variantIndices = equalDigits[position];
+	for (const position of positions) {
+		const positionNumber = Number(position);
+		const variantIndices = equalDigits[positionNumber];
 
 		if (arrayChainable(variantIndices)) {
-			chainedEqualDigits[position] = [];
+			chainedEqualDigits[positionNumber] = [];
 
-			for (let i = 0; i < variantIndices.length; i++) {
-				const variantTuple = variantIndices[i];
-
-				for (let j = 0; j < variantTuple.length; j++) {
-					if (!chainedEqualDigits[position].includes(variantTuple[j])) {
-						chainedEqualDigits[position].push(variantTuple[j]);
+			for (const variantTuple of variantIndices) {
+				for (const tupleMember of variantTuple) {
+					if (!chainedEqualDigits[positionNumber].includes(tupleMember)) {
+						chainedEqualDigits[positionNumber].push(tupleMember);
 					}
 				}
 			}
