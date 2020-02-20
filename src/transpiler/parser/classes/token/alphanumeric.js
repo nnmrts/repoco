@@ -10,7 +10,7 @@ import Token from "../token.js";
  * @class AlphanumericToken
  * @augments {Token<"[A-Z]">}
  */
-export default class AlphanumericToken extends Token<"[A-Z0-9]" | "([A-Z0-9])?"> {
+export default class AlphanumericToken extends Token<"[0-9A-Z]" | "([0-9A-Z])?"> {
 	/**
 	 * Creates an instance of AlphanumericToken.
 	 *
