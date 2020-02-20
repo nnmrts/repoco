@@ -35,8 +35,8 @@ repoco {
 					digitWord = "digit" "s"? space
                     atIndex = "at index" space digit+ space
 					beWord = ("is"|"are") space*
-					digitList = nonemptyListOf<((range|upper|digit)+), (separators)> space*
-						range = nonemptyListOf<((upper|digit)+), hyphen>
+					digitList = nonemptyListOf<((range|upper+|digit+)), (separators)> space*
+						range = (upper|digit)+ hyphen (upper|digit)+
 						separators = (","|space+)
 							hyphen = space* "-" space*
 
