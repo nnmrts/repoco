@@ -9,19 +9,10 @@ import AlphanumericToken from "../../../../src/transpiler/parser/classes/token/a
 const tokens = [
 	0,
 	1,
-	100,
-	[
-		0,
-		0
-	],
-	[
-		0,
-		1
-	],
-	[
-		0,
-		100
-	]
+	10,
+	[0, 0],
+	[0, 1],
+	[0, 10]
 ].map((amount: number | [number, number]): (NumberToken | CharacterToken | AlphanumericToken)[] => [
 	NumberToken,
 	CharacterToken,

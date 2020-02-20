@@ -23,8 +23,5 @@ export default (
 		throw new RangeError("end is greater than length");
 	}
 
-	return [
-		start,
-		end
-	];
+	return [start, end];
 };

@@ -45,9 +45,7 @@ export default (
 			.map((digit: PostDigits): PostDigits => {
 				const set = new Set(arrayCast(digit));
 
-				const array = [
-					...set
-				];
+				const array = [...set];
 
 				return arrayDecast(array);
 			});
@@ -55,9 +53,7 @@ export default (
 		newVariants.push(unitedDigits);
 	}
 
-	variantIndicesWithEqualDigits = [
-		...new Set(variantIndicesWithEqualDigits)
-	].sort();
+	variantIndicesWithEqualDigits = [...new Set(variantIndicesWithEqualDigits)].sort();
 
 	const missingVariants = [];
 

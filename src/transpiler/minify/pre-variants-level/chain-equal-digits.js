@@ -24,10 +24,7 @@ export default (digitsArray: PreVariants): ChainedEqualDigits => {
 	const chainedEqualDigits = Object.fromEntries(positions.map((position: string): [
 		number,
 		number[]
-	] => [
-		Number(position),
-		[]
-	]));
+	] => [Number(position), []]));
 
 	for (const position of positions) {
 		const positionNumber = Number(position);

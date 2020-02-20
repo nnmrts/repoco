@@ -1,4 +1,2 @@
 // @flow
-export default (string: string): string => [
-	...string
-].reverse().join("");
+export default (string: string): string => [...string].reverse().join("");

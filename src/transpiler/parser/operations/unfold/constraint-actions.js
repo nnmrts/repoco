@@ -15,10 +15,7 @@ export type Constraint = {|
 
 type ConstraintFunction = () => Constraint;
 
-export default Object.fromEntries<ConstraintKeys, ConstraintFunction>([
-	"excluder",
-	"tolerator"
-].map<[
+export default Object.fromEntries<ConstraintKeys, ConstraintFunction>(["excluder", "tolerator"].map<[
 	ConstraintKeys,
 	ConstraintFunction
 ]>((rule: ConstraintKeys): [

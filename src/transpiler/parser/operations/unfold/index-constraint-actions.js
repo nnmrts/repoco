@@ -8,10 +8,7 @@ import { type Constraint, type ConstraintKeys } from "./constraint-actions.js";
 
 type ConstraintFunction = () => Constraint;
 
-export default Object.fromEntries<ConstraintKeys, ConstraintFunction>([
-	"indexExcluder",
-	"indexTolerator"
-].map<[
+export default Object.fromEntries<ConstraintKeys, ConstraintFunction>(["indexExcluder", "indexTolerator"].map<[
 	ConstraintKeys,
 	ConstraintFunction
 ]>((rule: ConstraintKeys): [

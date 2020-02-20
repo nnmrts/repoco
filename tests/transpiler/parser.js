@@ -69,11 +69,7 @@ test("quantifiers throw on negative", (t: TestInterface) => {
 });
 
 test("quantifiers don't quantify rubbish", (t: TestInterface) => {
-	for (let i = 1; i < 100; i++) {
-		const invalids = [
-			`a{${i}}`,
-			`{${i}}`
-		];
+		const invalids = [`a{${i}}`, `{${i}}`];
 
 		for (const invalid of invalids) {
 			t.throws(() => {
@@ -87,10 +83,7 @@ test("quantifiers don't quantify rubbish", (t: TestInterface) => {
 
 test("at index doesn't throw", (t: TestInterface) => {
 	for (let i = 1; i < 10; i++) {
-		const definitions = [
-			`n{${i * 2}} possible digits at index ${i} are 0-3`,
-			`n{${i * 2}} impossible digits at index ${i} are 0-3`,
-		];
+		const definitions = [`n{${i * 2}} possible digits at index ${i} are 0-3`, `n{${i * 2}} impossible digits at index ${i} are 0-3`];
 
 		for (const definition of definitions) {
 			t.notThrows(() => {

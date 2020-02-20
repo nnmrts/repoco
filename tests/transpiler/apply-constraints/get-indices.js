@@ -13,10 +13,7 @@ const tokens = [
 
 const patterns = [
 	Array(5).fill("n"),
-	[
-		...Array(5).fill("c"),
-		...Array(5).fill("n"),
-	],
+	[...Array(5).fill("c"), ...Array(5).fill("n"),],
 	[
 		...Array(5).fill("c"),
 		...Array(5).fill("n"),

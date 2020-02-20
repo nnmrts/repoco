@@ -13,7 +13,4 @@ export default Object.fromEntries<PrimitiveKeys, PrimitiveFunction>([
 ].map((rule: PrimitiveKeys): [
 	PrimitiveKeys,
 	PrimitiveFunction
-] => [
-	rule,
-	(node: Node): string => node.sourceString
-]));
+] => [rule, (node: Node): string => node.sourceString]));

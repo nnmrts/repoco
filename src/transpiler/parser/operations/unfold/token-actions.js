@@ -14,25 +14,13 @@ type TokenKeys = "character" | "number" | "alphanumeric";
 type TokenFunction = () => Tokens;
 
 export default Object.fromEntries<TokenKeys, TokenFunction>([
-	[
-		"character",
-		CharacterToken
-	],
-	[
-		"number",
-		NumberToken
-	],
-	[
-		"alphanumeric",
-		AlphanumericToken
-	]
+	["character", CharacterToken],
+	["number", NumberToken],
+	["alphanumeric", AlphanumericToken]
 ].map((entry: [
 	TokenKeys,
 	ClassTokens
 ]): [
 	TokenKeys,
 	TokenFunction
-] => [
-	entry[0],
-	(string: Node, repeater: Node): Tokens => new entry[1](repeater.unfold()[0] ? repeater.unfold()[0] : 1)
-]));
+] => [entry[0], (string: Node, repeater: Node): Tokens => new entry[1](repeater.unfold()[0] ? repeater.unfold()[0] : 1)]));

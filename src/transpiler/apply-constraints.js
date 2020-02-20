@@ -46,10 +46,7 @@ export default (
 
 			currentIndex = range[1];
 
-			constraintIndices.push([
-				currentIndex,
-				cardinalToNumber(amount)
-			]);
+			constraintIndices.push([currentIndex, cardinalToNumber(amount)]);
 
 			if (!partitionedDigits.length) {
 				partitionedDigits.push(...digits);

@@ -6,19 +6,10 @@ import CharacterToken from "../../../../../src/transpiler/parser/classes/token/c
 const tokens = [
 	0,
 	1,
-	100,
-	[
-		0,
-		0
-	],
-	[
-		0,
-		1
-	],
-	[
-		0,
-		100
-	]
+	10,
+	[0, 0],
+	[0, 1],
+	[0, 10]
 ].map((amount: number | [number, number]): CharacterToken => new CharacterToken(amount));
 
 test("only contains [A-Z] or ([A-Z])?", (t: TestInterface) => {

@@ -14,8 +14,5 @@ export default (digitLists: Node, space: Node): string[] => digitLists.children
 		return digits;
 	})
 	.flat()
-	.filter((digit: string): boolean => ![
-		",",
-		" "
-	].includes(digit) && !(/^(\s)+$/).test(digit))
+	.filter((digit: string): boolean => ![",", " "].includes(digit) && !(/^(\s)+$/).test(digit))
 	.map((digit: string): string => digit.replace(/\t/g, ""));

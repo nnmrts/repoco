@@ -6,19 +6,10 @@ import AlphanumericToken from "../../../../../src/transpiler/parser/classes/toke
 const tokens = [
 	0,
 	1,
-	100,
-	[
-		0,
-		0
-	],
-	[
-		0,
-		1
-	],
-	[
-		0,
-		100
-	]
+	10,
+	[0, 0],
+	[0, 1],
+	[0, 10]
 ].map((amount: number | [number, number]): AlphanumericToken => new AlphanumericToken(amount));
 
 test("only contains [A-Z0-9] or ([A-Z0-9])?", (t: TestInterface) => {

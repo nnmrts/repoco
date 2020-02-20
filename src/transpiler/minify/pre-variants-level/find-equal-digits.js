@@ -43,10 +43,9 @@ export default (digitsArray: PreVariants): EqualDigits => {
 							equalDigits[i] = [];
 						}
 
-						equalDigits[i].push([
-							originalIndices[sameLengthIndex - 1],
-							originalIndices[sameLengthIndex]
-						]);
+						equalDigits[i].push(
+							[originalIndices[sameLengthIndex - 1], originalIndices[sameLengthIndex]]
+						);
 					}
 				}
 			}

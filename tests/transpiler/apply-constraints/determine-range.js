@@ -60,47 +60,29 @@ const constantLength = 9;
 
 test("last works", (t: TestInterface) => {
 	for (let length = 2; length < 10; length++) {
-		t.deepEqual(determineRange("last", length, constantIndex, numberToCardinal(constantAmount)), [
-			length - constantAmount,
-			length
-		]);
+		t.deepEqual(determineRange("last", length, constantIndex, numberToCardinal(constantAmount)), [length - constantAmount, length]);
 	}
 
 	for (let index = 2; index < 10; index++) {
-		t.deepEqual(determineRange("last", constantLength, index, numberToCardinal(constantAmount)), [
-			constantLength - constantAmount,
-			constantLength
-		]);
+		t.deepEqual(determineRange("last", constantLength, index, numberToCardinal(constantAmount)), [constantLength - constantAmount, constantLength]);
 	}
 
 	for (let amount = 1; amount < 10; amount++) {
-		t.deepEqual(determineRange("last", constantLength, constantIndex, numberToCardinal(amount)), [
-			constantLength - amount,
-			constantLength
-		]);
+		t.deepEqual(determineRange("last", constantLength, constantIndex, numberToCardinal(amount)), [constantLength - amount, constantLength]);
 	}
 });
 
 test("next works", (t: TestInterface) => {
 	for (let length = 2; length < 10; length++) {
-		t.deepEqual(determineRange("next", length, constantIndex, numberToCardinal(constantAmount)), [
-			constantIndex,
-			constantIndex + constantAmount
-		]);
+		t.deepEqual(determineRange("next", length, constantIndex, numberToCardinal(constantAmount)), [constantIndex, constantIndex + constantAmount]);
 	}
 
 	for (let index = 2; index < 8; index++) {
-		t.deepEqual(determineRange("next", constantLength, index, numberToCardinal(constantAmount)), [
-			index,
-			index + constantAmount
-		]);
+		t.deepEqual(determineRange("next", constantLength, index, numberToCardinal(constantAmount)), [index, index + constantAmount]);
 	}
 
 	for (let amount = 1; amount < 10; amount++) {
-		t.deepEqual(determineRange("next", constantLength, constantIndex, numberToCardinal(amount)), [
-			0,
-			amount
-		]);
+		t.deepEqual(determineRange("next", constantLength, constantIndex, numberToCardinal(amount)), [0, amount]);
 	}
 });
 
@@ -118,10 +100,7 @@ test("positionals work", (t: TestInterface) => {
 						length,
 						constantIndex,
 						numberToCardinal(constantAmount)
-					), [
-						constantIndex + positionalNumber,
-						constantIndex + positionalNumber + constantAmount
-					]
+					), [constantIndex + positionalNumber, constantIndex + positionalNumber + constantAmount]
 				);
 			}
 		}
@@ -133,10 +112,7 @@ test("positionals work", (t: TestInterface) => {
 					constantLength,
 					index,
 					numberToCardinal(constantAmount)
-				), [
-					positionalNumber,
-					positionalNumber + constantAmount
-				]
+				), [positionalNumber, positionalNumber + constantAmount]
 			);
 		}
 
@@ -148,10 +124,7 @@ test("positionals work", (t: TestInterface) => {
 						constantLength,
 						constantIndex,
 						numberToCardinal(amount)
-					), [
-						positionalNumber,
-						positionalNumber + amount
-					]
+					), [positionalNumber, positionalNumber + amount]
 				);
 			}
 		}
