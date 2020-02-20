@@ -72,10 +72,8 @@ export default (
 				partitionedDigits[range[0]] = `(${lookahead}(${currentDigits.join("")}))`;
 			}
 
-			if (amount) {
 				partitionedDigits.splice(currentIndex - 1, cardinalToNumber(amount) - 1);
 			}
-		}
 
 		realDigits = partitionedDigits;
 
