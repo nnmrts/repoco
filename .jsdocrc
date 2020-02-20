@@ -5,5 +5,8 @@
         "includePattern": ".+\\.js$",
         "excludePattern": "(^|\\/|\\\\)_"
     },
-    "plugins": ["node_modules/jsdoc-babel"]
+    "plugins": ["node_modules/jsdoc-babel"],
+    "opts": {
+        "destination": "./docs/"
+    }
 }
