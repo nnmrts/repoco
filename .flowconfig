@@ -1,6 +1,6 @@
 [ignore]
 .*/.cache/.*
-.*/dist/.*
+./dist/.*
 .*/git/.*
 <PROJECT_ROOT>/git/.*
 
