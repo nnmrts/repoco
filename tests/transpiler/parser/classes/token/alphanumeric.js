@@ -12,11 +12,8 @@ const tokens = [
 	[0, 10]
 ].map((amount: number | [number, number]): AlphanumericToken => new AlphanumericToken(amount));
 
-test("only contains [A-Z0-9] or ([A-Z0-9])?", (t: TestInterface) => {
-	for (let i = 0; i < tokens.length; i++) {
-		t.true(tokens[i].every((item: string): boolean => [
-			"[A-Z0-9]",
-			"([A-Z0-9])?"
-		].includes(item)));
+test("only contains [0-9A-Z] or ([0-9A-Z])?", (t: TestInterface) => {
+	for (const token of tokens) {
+		t.true(token.every((item: string): boolean => ["[0-9A-Z]", "([0-9A-Z])?"].includes(item)));
 	}
 });

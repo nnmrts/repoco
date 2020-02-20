@@ -5,7 +5,7 @@ export default (strings: string[]): string => {
 	}
 
 	let string1 = strings[0];
-	let string2 = strings[strings.length - 1];
+	let string2 = strings.slice(-1)[0];
 
 	for (const string of strings) {
 		string1 = string1 < string ? string : string1;

@@ -13,10 +13,7 @@ const tokens = [
 ].map((amount: number | [number, number]): NumberToken => new NumberToken(amount));
 
 test("only contains [0-9] or ([0-9])?", (t: TestInterface) => {
-	for (let i = 0; i < tokens.length; i++) {
-		t.true(tokens[i].every((item: string): boolean => [
-			"[0-9]",
-			"([0-9])?"
-		].includes(item)));
+	for (const token of tokens) {
+		t.true(token.every((item: string): boolean => ["[0-9]", "([0-9])?"].includes(item)));
 	}
 });

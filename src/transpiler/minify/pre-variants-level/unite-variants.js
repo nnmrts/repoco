@@ -77,10 +77,7 @@ export default (
 								(digit: PostDigits, index: number): [
 									number,
 									PostDigits
-								] => [
-									index,
-									digit
-								]
+								] => [index, digit]
 							)
 					)
 			)

@@ -13,10 +13,7 @@ const tokens = [
 ].map((amount: number | [number, number]): CharacterToken => new CharacterToken(amount));
 
 test("only contains [A-Z] or ([A-Z])?", (t: TestInterface) => {
-	for (let i = 0; i < tokens.length; i++) {
-		t.true(tokens[i].every((item: string): boolean => [
-			"[A-Z]",
-			"([A-Z])?"
-		].includes(item)));
+	for (const token of tokens) {
+		t.true(token.every((item: string): boolean => ["[A-Z]", "([A-Z])?"].includes(item)));
 	}
 });

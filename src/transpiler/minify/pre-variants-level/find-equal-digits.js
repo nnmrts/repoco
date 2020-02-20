@@ -13,8 +13,8 @@ export type EqualDigits = {
  * @returns {$ReadOnlyArray<[number, [number, number]]>}
  * all the equal digits
  */
-export default (digitsArray: PreVariants): EqualDigits => {
-	const lengthMax = Math.max(...digitsArray.map((digits: PreDigits): number => digits.length));
+export default (variants: PreVariants): EqualDigits => {
+	const lengthMax = Math.max(...variants.map((digits: PreDigits): number => digits.length));
 
 	const equalDigits = {};
 

@@ -20,6 +20,6 @@ export default class AlphanumericToken extends Token<"[A-Z0-9]" | "([A-Z0-9])?">
 	 * @memberof AlphanumericToken
 	 */
 	constructor(amount: number | [number, number]) {
-		super("[A-Z0-9]", amount);
+		super("[0-9A-Z]", amount);
 	}
 }

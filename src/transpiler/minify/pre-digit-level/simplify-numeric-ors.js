@@ -114,7 +114,9 @@ export default (digit: Digit): Digit => {
 					const compactVariant = [];
 					for (let i = 0; i < digitLength; i++) {
 						if (i !== smallestVarianceIndex) {
-							const digitsOnIndex = splitUpRanges.map((range: string[]): string => range[i]);
+							const digitsOnIndex = splitUpRanges.map(
+								(range: string[]): string => range[i]
+							);
 
 							compactVariant[i] = [];
 

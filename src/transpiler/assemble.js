@@ -10,10 +10,12 @@ export default (variants: PostVariants): RegExp => {
 		if (variant.filter((digits: PostDigits): boolean => Array.isArray(digits)).length !== 0) {
 			const firstArrayInVariant = variant.filter((digits: PostDigits): boolean => Array.isArray(digits))[0];
 
-			for (let j = 0; j < firstArrayInVariant.length; j++) {
+			const length = firstArrayInVariant.length;
+
+			for (let i = 0; i < length; i++) {
 				const transposedVariant = variant.map((row: PostDigits): string => {
 					if (Array.isArray(row)) {
-						return row[j];
+						return row[i];
 					}
 					return row;
 				}).join("");

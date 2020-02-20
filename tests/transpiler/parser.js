@@ -31,7 +31,6 @@ test("returns array", (t: TestInterface) => {
 });
 
 test("empty definition returns empty array", (t: TestInterface) => {
-	for (let i = 0; i < paths.length; i++) {
 		const parsed = parser("");
 		if (!Array.isArray(parsed) && parsed.length === 0) {
 			t.fail();
@@ -39,14 +38,13 @@ test("empty definition returns empty array", (t: TestInterface) => {
 		else {
 			t.pass();
 		}
-	}
 });
 
 test("quantifiers quantify", (t: TestInterface) => {
 	for (let i = 1; i < 100; i++) {
 		t.deepEqual(parser(`n{${i}}`)[0].pattern, Array(i).fill("[0-9]"));
 		t.deepEqual(parser(`c{${i}}`)[0].pattern, Array(i).fill("[A-Z]"));
-		t.deepEqual(parser(`x{${i}}`)[0].pattern, Array(i).fill("[A-Z0-9]"));
+		t.deepEqual(parser(`x{${i}}`)[0].pattern, Array(i).fill("[0-9A-Z]"));
 	}
 });
 

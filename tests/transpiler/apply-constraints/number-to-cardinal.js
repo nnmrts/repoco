@@ -3,10 +3,6 @@ import test, { type TestInterface } from "ava";
 
 import numberToCardinal from "../../../src/transpiler/apply-constraints/number-to-cardinal.js";
 
-test("defaults to one", (t: TestInterface) => {
-	t.is(numberToCardinal(1), "one");
-});
-
 test("converts number to cardinal word", (t: TestInterface) => {
 	const cardinalWords = [
 		"one",
