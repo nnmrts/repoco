@@ -57,6 +57,16 @@
 			"!**/data/*.js"
 		]
 	},
+	"nyc": {
+		"all": true,
+		"include": [
+			"src/**/*.js"
+		],
+		"exclude": [
+			"src/expressions/**/*.js",
+			"src/expressions.js"
+		]
+	},
 	"husky": {
 		"hooks": {
 			"prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
