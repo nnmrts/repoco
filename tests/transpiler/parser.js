@@ -31,17 +31,17 @@ test("returns array", (t: TestInterface) => {
 });
 
 test("empty definition returns empty array", (t: TestInterface) => {
-		const parsed = parser("");
-		if (!Array.isArray(parsed) && parsed.length === 0) {
-			t.fail();
-		}
-		else {
-			t.pass();
-		}
+	const parsed = parser("");
+	if (!Array.isArray(parsed) && parsed.length === 0) {
+		t.fail();
+	}
+	else {
+		t.pass();
+	}
 });
 
 test("quantifiers quantify", (t: TestInterface) => {
-	for (let i = 1; i < 100; i++) {
+	for (let i = 1; i < 10; i++) {
 		t.deepEqual(parser(`n{${i}}`)[0].pattern, Array(i).fill("[0-9]"));
 		t.deepEqual(parser(`c{${i}}`)[0].pattern, Array(i).fill("[A-Z]"));
 		t.deepEqual(parser(`x{${i}}`)[0].pattern, Array(i).fill("[0-9A-Z]"));
@@ -49,7 +49,7 @@ test("quantifiers quantify", (t: TestInterface) => {
 });
 
 test("quantifiers throw on negative", (t: TestInterface) => {
-	for (let i = 1; i < 100; i++) {
+	for (let i = 1; i < 10; i++) {
 		const invalids = [
 			`n{${-i}}`,
 			`c{${-i}}`,
@@ -67,6 +67,7 @@ test("quantifiers throw on negative", (t: TestInterface) => {
 });
 
 test("quantifiers don't quantify rubbish", (t: TestInterface) => {
+	for (let i = 1; i < 10; i++) {
 		const invalids = [`a{${i}}`, `{${i}}`];
 
 		for (const invalid of invalids) {

@@ -28,7 +28,7 @@ test("is an array", (t: TestInterface) => {
 });
 
 test("throws on negative", (t: TestInterface) => {
-	for (let i = -1; i > -100; i--) {
+	for (let i = -1; i > -10; i--) {
 		t.throws(() => {
 			new Token("[A-Z]", i);
 		}, {
