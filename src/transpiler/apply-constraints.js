@@ -13,6 +13,7 @@ export default (
 	constraints
 }: AnnotatedVariant): $ReadOnlyArray<string> => {
 	let realDigits = pattern;
+
 	const excluded = [
 		"(",
 		")?",
