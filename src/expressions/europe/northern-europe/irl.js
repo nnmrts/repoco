@@ -8,4 +8,4 @@
 // impossible four digits at index 4 are B,G,I,J,L,M,O,Q,S,U,Z
 import full2NumberDigits from "../../../helpers/full/number/full-2-number-digits.js";
 
-export default new RegExp(`^((?![BGIJLMOQSUZ])[A-Z]${full2NumberDigits}|D6W) ((?![BGIJLMOQSUZ])[A-Z0-9]){4}$`);
+export default new RegExp(`^((?![BGIJLMOQSUZ])[A-Z]${full2NumberDigits}|D6W) ((?![BGIJLMOQSUZ])[0-9A-Z]){4}$`);
