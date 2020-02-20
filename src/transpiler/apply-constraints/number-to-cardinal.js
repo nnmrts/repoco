@@ -8,7 +8,7 @@ import { type Cardinal } from "../types.js";
  * number.
  * @example
  */
-export default (number: number = 1): Cardinal => [
+export default (number: number): Cardinal => [
 	"one",
 	"two",
 	"three",
