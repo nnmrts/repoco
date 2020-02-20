@@ -1,7 +1,7 @@
 // @flow
 import toRegexRange from "to-regex-range";
 
-import arrayUnique from "../../utils/array-unique.js";
+import arrayUnique from "../../utils/array/unique.js";
 import { type Digit } from "../../types.js";
 
 /**

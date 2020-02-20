@@ -1,5 +1,5 @@
 // @flow
-import arrayUnite from "../../utils/array-unite.js";
+import arrayUnite from "../../utils/array/unite.js";
 import {
 	type PreVariants,
 	type PostVariants,
@@ -7,8 +7,8 @@ import {
 	type PreDigits,
 	type PostDigits
 } from "../../types.js";
-import arrayDecast from "../../utils/array-decast.js";
-import arrayCast from "../../utils/array-cast.js";
+import arrayDecast from "../../utils/array/decast.js";
+import arrayCast from "../../utils/array/cast.js";
 
 import { type ChainedEqualDigits } from "./chain-equal-digits.js";
 

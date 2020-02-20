@@ -1,11 +1,10 @@
 // @flow
 /**
- *
- *
- * @param {...mixed[]} arrays
- * arrays
+ * @param {...mixed[]} arrays -
+ * arrays.
  * @returns {mixed[]}
- * longest array
+ * longest array.
+ * @example
  */
 export default <+T: $ReadOnlyArray<mixed>>(...arrays: T[]): T => arrays.sort((
 	array1: T,

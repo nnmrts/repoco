@@ -4,6 +4,7 @@ import determineRange from "./apply-constraints/determine-range.js";
 import getIndices from "./apply-constraints/get-indices.js";
 import cardinalToNumber from "./apply-constraints/cardinal-to-number.js";
 import unfoldRange from "./apply-constraints/unfold-range.js";
+import arrayReplace from "./utils/array/replace.js";
 
 /**
  * @example
@@ -36,10 +37,10 @@ export default (
 
 		for (const constraint of constraints) {
 			const {
-					position,
-					amount,
-					type,
-					digits: rawConstraintDigits
+				position,
+				amount,
+				type,
+				digits: rawConstraintDigits
 			} = constraint;
 
 			const range = determineRange(
@@ -77,8 +78,8 @@ export default (
 				partitionedDigits[range[0]] = `(${lookahead}(${currentDigits.join("")}))`;
 			}
 
-				partitionedDigits.splice(currentIndex - 1, cardinalToNumber(amount) - 1);
-			}
+			partitionedDigits.splice(currentIndex - 1, cardinalToNumber(amount) - 1);
+		}
 
 		realDigits = partitionedDigits;
 

@@ -1,16 +1,11 @@
 // @flow
-import arrayLongest from "./array-longest.js";
+import arrayLongest from "./longest.js";
 
 /**
- *
- *
-
- * @param {(number | [number, number])} indexOrRange
- * index or range
- * @param {T[]} ...arrays
- * arrays
- * @returns {mixed[]}
- * united array
+ * @example
+ * @param {number | number[]} indexOrRange - Index or range.
+ * @param {Array[]} arrays - Arrays.
+ * @returns {Array | Array[]} United array.
  */
 export default <+T>(
 	indexOrRange: number | [number, number],

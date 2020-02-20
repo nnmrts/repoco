@@ -1,6 +1,6 @@
 // @flow
 import { type PreVariants } from "../../types.js";
-import arrayChainable from "../../utils/array-chainable.js";
+import arrayChainable from "../../utils/array/chainable.js";
 
 import findEqualDigits from "./find-equal-digits.js";
 

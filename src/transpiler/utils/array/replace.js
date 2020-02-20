@@ -1,15 +1,14 @@
 // @flow
 /**
- *
- *
- * @param {mixed[]} array
- * array
- * @param {(number | [number, number])} indexOrRange
- * index or range
- * @param {...mixed[]} values
- * values
+ * @param {mixed[]} array -
+ * array.
+ * @param {(number | [number, number])} indexOrRange -
+ * index or range.
+ * @param {...mixed[]} values -
+ * values.
  * @returns {mixed[]}
- * array
+ * array.
+ * @example
  */
 export default <+T: $ReadOnlyArray<mixed>>(
 	array: T,
