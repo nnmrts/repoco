@@ -10,7 +10,55 @@
 				"numbers": true
 			}
 		],
-		"no-spaced-func": "off"
+		"no-spaced-func": "off",
+		"no-magic-numbers": [
+			"error",
+			{
+				"ignore": [
+					-1,
+					0,
+					1,
+					2
+				],
+				"enforceConst": true
+			}
+		],
+		"max-len": [
+			"error",
+			{
+				"code": 100,
+				"comments": 100,
+				"ignoreStrings": true,
+				"ignoreTemplateLiterals": true,
+				"ignoreRegExpLiterals": true,
+				"ignoreUrls": true,
+				"ignorePattern": "^\\s\\* ",
+				"tabWidth": 4
+			}
+		],
+		"no-restricted-syntax": [
+			"error",
+			{
+				"selector": "WithStatement",
+				"message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+			}
+		],
+		"guard-for-in": "off",
+		"no-unmodified-loop-condition": "error",
+		"array-bracket-newline": [
+			"error",
+			{
+				"minItems": 3,
+				"multiline": true
+			}
+		],
+		"array-element-newline": [
+			"error",
+			{
+				"minItems": 3,
+				"multiline": true
+			}
+		],
 	},
 	"settings": {
 		"polyfills": [
